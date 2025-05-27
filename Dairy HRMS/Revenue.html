@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Revenue.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Dairy Farm Revenue Dashboard</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="image/logo.jpg" alt="Logo" class="logo" />
+            <h1>Revenue</h1>
+            <input type="text" placeholder=" Search..." class="search-bar" />
+            <div>
+              <img src="image/bell.png" alt="notifications"
+                class="admin_logo" />
+              <img src="image/email.png" alt="mail" class="admin_logo" />
+              <img src="image/internet.png" alt="internet" class="admin_logo" />
+              <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+              <span class="user_name">Admin</span>
+            </div>
+          </header>
+
+        <div class="section">
+            <div class="flex">
+                <div class="card">
+                    <h2>110</h2>
+                    <p>Cows</p>
+                </div>
+                <div class="card">
+                    <h2>2834</h2>
+                    <p>Customers</p>
+                </div>
+                <div class="card">
+                    <h2>$2543</h2>
+                    <p>Daily Revenue</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="chart-box">
+                <h2>Revenue</h2>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h2>Sales and Orders</h2>
+                <canvas id="salesChart"></canvas>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Revenue of Dairy Farm</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Product</th>
+                        <th>Amount Earned</th>
+                        <th>Units Sold</th>
+                        <th>Revenue Source</th>
+                        <th>Sales Region</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>March 1, 2025</td><td>Milk</td><td>₹500</td><td>1000
+                            liters</td><td>Retail</td><td>North Region</td></tr>
+                    <tr><td>March 2,
+                            2025</td><td>Cheese</td><td>₹300</td><td>150
+                            kg</td><td>Wholesale</td><td>East Region</td></tr>
+                    <tr><td>March 3, 2025</td><td>Milk</td><td>₹450</td><td>900
+                            liters</td><td>Retail</td><td>West Region</td></tr>
+                    <tr><td>March 4, 2025</td><td>Butter</td><td>₹200</td><td>50
+                            kg</td><td>Wholesale</td><td>South Region</td></tr>
+                    <tr><td>March 5, 2025</td><td>Milk</td><td>₹600</td><td>1200
+                            liters</td><td>Retail</td><td>Central
+                            Region</td></tr>
+                </tbody>
+            </table>
+
+            <form>
+                <input type="date" required/>
+                <input type="text" placeholder="Product" required pattern="[A-Za-z\s]+"/>
+                <input type="number" placeholder="Amount Earned" required pattern="[0-9]"/>
+                <input type="number" placeholder="Units Sold" required pattern="[0-9]"/>
+                <input type="text" placeholder="Revenue Source" required pattern="[A-Za-z\s]+"/>
+                <input type="text" placeholder="Sales Region" required pattern="[A-Za-z\s]+"/>
+                <button type="submit">Add Revenue</button>
+            </form>
+        </div>
+
+        <script src="Revenue.js"></script>
+    </body>
+</html>

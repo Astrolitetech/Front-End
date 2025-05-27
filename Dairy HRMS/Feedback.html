@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Feedback & Complaint Management</title>
+        <link rel="stylesheet" href="Feedback.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <img src="image/logo.jpg" alt="Logo" class="logo" />
+            <div id="toggleBtn">
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+            </div>
+            <h1>Feedback & Complaint Management</h1>
+            <input type="text" placeholder=" Search..." class="search-bar" />
+            <div>
+                <img src="image/bell.png" alt="notifications"
+                    class="admin_logo" />
+                <img src="image/email.png" alt="mail" class="admin_logo" />
+                <img src="image/internet.png" alt="internet"
+                    class="admin_logo" />
+                <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+                <span class="user_name">Admin</span>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <!-- Metric Cards -->
+            <div class="cards">
+                <div class="card blue">
+                    <h2>CSAT Score</h2>
+                    <p class="value">84% <span class="change">+2%</span></p>
+                    <small>Last 30 days</small>
+                </div>
+                <div class="card sky">
+                    <h2>NPS</h2>
+                    <p class="value">62 <span class="change">+5</span></p>
+                    <small>Last 30 days</small>
+                </div>
+                <div class="card orange">
+                    <h2>Open Complaints</h2>
+                    <p class="value">14 <span class="change up">+3</span></p>
+                    <small>Active cases</small>
+                </div>
+                <div class="card purple">
+                    <h2>Avg Resolution</h2>
+                    <p class="value">2.1d <span
+                            class="change down">-0.5d</span></p>
+                    <small>Time to resolve</small>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active"
+                    onclick="showTab('tab1', this)"><img
+                        src="image/customer-experience.png" class="btn-icon">
+                    Customer Feedback</button>
+                <button class="tab"
+                    onclick="showTab('tab2', this)"><img
+                        src="image/register.png" class="btn-icon"> Complaint
+                    Management</button>
+                <button class="tab"
+                    onclick="showTab('tab3', this)"><img
+                        src="image/dashboard.png" class="btn-icon">
+                    Analytics</button>
+                <button class="tab" onclick="showTab('tab4', this)"> <img
+                        src="image/team.png" class="btn-icon"> Team
+                    Performance</button>
+            </div>
+
+            <div id="tab1" class="tab-content active">
+                <div class="feedback-container">
+                    <!-- Feedback Table -->
+                    <div class="feedback-section">
+                        <div class="table-header">
+                            <h3>Recent Feedback</h3>
+                            <input type="search"
+                                placeholder="Search feedback..." />
+                            <button class="filter-btn">Filter</button>
+                            <button class="add-btn"
+                                id="openCustomerFeedbackPopupBtn">+ Add</button>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="dateclass">Date</th>
+                                    <th class="customerclass">Customer</th>
+                                    <th>Feedback</th>
+                                    <th>Sentiment</th>
+                                    <th>Category</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023-06-15</td>
+                                    <td>John Smith</td>
+                                    <td>Very happy with the quick response to my
+                                        issue</td>
+                                    <td><span
+                                            class="tag positive">Positive</span></td>
+                                    <td><span
+                                            class="tag service">Service</span></td>
+                                    <td class="icon-box"><img
+                                            src="image/view.png"
+                                            class="icons"> <img
+                                            src="image/pencil.png"
+                                            class="icons">
+                                        <img src="image/trash.png"
+                                            class="icons"></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-14</td>
+                                    <td>Sarah Johnson</td>
+                                    <td>The product didn't meet my
+                                        expectations</td>
+                                    <td><span
+                                            class="tag negative">Negative</span></td>
+                                    <td><span
+                                            class="tag product">Product</span></td>
+                                    <td class="icon-box"><img
+                                            src="image/view.png"
+                                            class="icons"> <img
+                                            src="image/pencil.png"
+                                            class="icons">
+                                        <img src="image/trash.png"
+                                            class="icons"></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-13</td>
+                                    <td>Mike Brown</td>
+                                    <td>Delivery was on time and
+                                        professional</td>
+                                    <td><span
+                                            class="tag positive">Positive</span></td>
+                                    <td><span
+                                            class="tag delivery">Delivery</span></td>
+                                    <td class="icon-box"><img
+                                            src="image/view.png"
+                                            class="icons"> <img
+                                            src="image/pencil.png"
+                                            class="icons">
+                                        <img src="image/trash.png"
+                                            class="icons"></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-12</td>
+                                    <td>Emily Davis</td>
+                                    <td>Support team didn't respond quickly</td>
+                                    <td><span
+                                            class="tag negative">Negative</span></td>
+                                    <td><span
+                                            class="tag support">Support</span></td>
+                                    <td class="icon-box"><img
+                                            src="image/view.png"
+                                            class="icons"> <img
+                                            src="image/pencil.png"
+                                            class="icons">
+                                        <img src="image/trash.png"
+                                            class="icons"></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-06-11</td>
+                                    <td>David Wilson</td>
+                                    <td>Good experience with the new dashboard
+                                        UI</td>
+                                    <td><span
+                                            class="tag neutral">Neutral</span></td>
+                                    <td><span class="tag ui">UI</span></td>
+                                    <td class="icon-box"><img
+                                            src="image/view.png"
+                                            class="icons"> <img
+                                            src="image/pencil.png"
+                                            class="icons">
+                                        <img src="image/trash.png"
+                                            class="icons"></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <div id="customerFeedbackpopupForm" class="popup-box">
+                            <h3 class="popup-header">Add New Supplier</h3>
+                            <form id="customerFeedbackForm">
+                                <label>Customer Name:</label><br>
+                                <input type="text" id="customerName" required
+                                    placeholder="Ex. Jhon rich"
+                                    pattern="[A-Za-z\s]+"
+                                    class="inputs"><br><br>
+
+                                <label>Feedback:</label><br>
+                                <input type="feedback" id="role" required
+                                    placeholder="Write some Feedback."
+                                    class="inputs"><br><br>
+
+                                <label>Sentiment:</label><br>
+                                <select class="inputs" required>
+                                    <option value>Select Option</option>
+                                    <option value="Positive">Positive</option>
+                                    <option value="Negative">Negative</option>
+                                </select><br><br>
+
+                                <label>Category:</label><br>
+                                <select class="inputs" required>
+                                    <option value>Select Option</option>
+                                    <option value="Service">Service</option>
+                                    <option value="Product">Product</option>
+                                </select><br><br>
+
+                                <div class="tab-header">
+                                    <button type="submit"
+                                        class="add-btn">Add</button>
+                                    <button type="button"
+                                        id="closeCustomerFeedbackPopupBtn"
+                                        class="add-btn">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Chart -->
+                    <div class="chart-section">
+                        <h3>Feedback Sentiment</h3>
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content">
+                <div class="middle-dashboard">
+                    <div class="left-panel">
+                        <div class="table-container">
+                            <h3> Agent Performance</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Agent</th>
+                                        <th>Cases Handled</th>
+                                        <th>Resolution Rate</th>
+                                        <th>Avg. Resolution Time</th>
+                                        <th>CSAT Score</th>
+                                        <th>Performance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sarah Johnson</td>
+                                        <td>42</td>
+                                        <td>92%</td>
+                                        <td>1.2d</td>
+                                        <td>4.8/5</td>
+                                        <td><span
+                                                class="bar bar-csat"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Chen</td>
+                                        <td>38</td>
+                                        <td>87%</td>
+                                        <td>1.5d</td>
+                                        <td>4.6/5</td>
+                                        <td><span
+                                                class="bar bar-resolve"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emily Wilson</td>
+                                        <td>35</td>
+                                        <td>85%</td>
+                                        <td>1.8d</td>
+                                        <td>4.5/5</td>
+                                        <td><span
+                                                class="bar bar-cases"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>David Brown</td>
+                                        <td>29</td>
+                                        <td>79%</td>
+                                        <td>2.3d</td>
+                                        <td>4.2/5</td>
+                                        <td><span
+                                                class="bar bar-time"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lisa Rodriguez</td>
+                                        <td>25</td>
+                                        <td>76%</td>
+                                        <td>2.7d</td>
+                                        <td>4.0/5</td>
+                                        <td><span
+                                                class="bar bar-time"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="right-panel">
+                        <div class="chart-box">
+                            <h3>📊 Team Performance</h3>
+                            <canvas id="radarChart"></canvas>
+                            <div class="legend">
+                                <div><span class="dot dot-csat"></span>
+                                    CSAT</div>
+                                <div><span class="dot dot-resolve"></span>
+                                    Resolution Rate</div>
+                                <div><span class="dot dot-time"></span> Avg.
+                                    Time</div>
+                                <div><span class="dot dot-cases"></span> Cases
+                                    Handled</div>
+                            </div>
+                            <div class="rating">
+                                <span class="dot dot-csat"></span> Excellent
+                                <strong>35%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab3" class="tab-content">
+                <h2>Analytics Overview</h2>
+                <div class="analytics-section">
+                    <!-- Line Chart -->
+                    <div class="chart-box">
+                        <h3>Feedback Over Time</h3>
+                        <canvas id="lineChart" width="400"
+                            height="200"></canvas>
+                    </div>
+
+                    <!-- Bar Chart -->
+                    <div class="chart-box">
+                        <h3>Complaints by Category</h3>
+                        <canvas id="barChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab4" class="tab-content">
+                <div class="main-section">
+                    <!-- Left Section -->
+                    <div class="left-panel">
+                        <div class="complaints-box">
+                            <div class="complaints-header">
+                                <h3> Complaint Cases</h3>
+                                <div class="controls">
+                                    <input type="text"
+                                        placeholder="Search complaints..." />
+                                    <button>Filter</button>
+                                    <button class="new-btn"
+                                        id="openTeamPopupBtn">+ New</button>
+                                </div>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Case ID</th>
+                                        <th>Opened</th>
+                                        <th>Customer</th>
+                                        <th>Issue</th>
+                                        <th>Status</th>
+                                        <th>Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>COMP-1245</td>
+                                        <td>2023-06-14</td>
+                                        <td>Emma Wilson</td>
+                                        <td>Product defect – screen
+                                            flickering</td>
+                                        <td><span class="status in-progress">In
+                                                Progress</span></td>
+                                        <td><span
+                                                class="priority high">High</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>COMP-1244</td>
+                                        <td>2023-06-13</td>
+                                        <td>David Lee</td>
+                                        <td>Billing error – double charge</td>
+                                        <td><span
+                                                class="status resolved">Resolved</span></td>
+                                        <td><span
+                                                class="priority medium">Medium</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>COMP-1243</td>
+                                        <td>2023-06-12</td>
+                                        <td>Lisa Chen</td>
+                                        <td>Shipping delay – 5 days overdue</td>
+                                        <td><span
+                                                class="status pending">Pending</span></td>
+                                        <td><span
+                                                class="priority low">Low</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>COMP-1242</td>
+                                        <td>2023-06-10</td>
+                                        <td>James Rodriguez</td>
+                                        <td>Wrong item received</td>
+                                        <td><span
+                                                class="status resolved">Resolved</span></td>
+                                        <td><span
+                                                class="priority high">High</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="top-performers">
+                            <h4>🏆 Top Performers</h4>
+                            <div class="cards">
+                                <div class="card blue">Highest
+                                    CSAT<br /><strong>4.9/5</strong><br />Sarah
+                                    Johnson</div>
+                                <div class="card sky">Fastest
+                                    Resolver<br /><strong>0.9d</strong><br />Michael
+                                    Chen</div>
+                                <div class="card purple">Most
+                                    Cases<br /><strong>42</strong><br />Sarah
+                                    Johnson</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="right-panel">
+                        <div class="chart-container">
+                            <h3>📈 Complaint Status</h3>
+                            <canvas id="donutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="teampopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Supplier</h3>
+                    <form id="teamForm">
+                        <label>Case ID:</label><br>
+                        <input type="text" id="id" required
+                            placeholder="Value like COMP-1234"
+                            pattern="COMP-[0-9]{4}"
+                            class="inputs"><br><br>
+
+                        <label>Customer Name:</label><br>
+                        <input type="text" id="name" required
+                            placeholder="Ex. Jhon rich"
+                            pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Issue:</label><br>
+                        <input type="text" id="issue" required
+                            placeholder="Write some feedback."
+                            class="inputs"><br><br>
+
+                        <label>Status:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select Option</option>
+                            <option value="Resolved">Resolved</option>
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                        </select><br><br>
+
+                        <div class="tab-header">
+                            <button type="submit"
+                                class="add-btn">Add</button>
+                            <button type="button" id="closeTeamPopupBtn"
+                                class="add-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="popup-bg" id="overlay"></div>
+
+            <script src="Feedback.js"></script>
+        </div>
+    </body>
+</html>

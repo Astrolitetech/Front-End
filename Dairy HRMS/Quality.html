@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quality Management Dashboard</title>
+    <link rel="stylesheet" href="Quality.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <img src="image/logo.jpg" alt="Logo" class="logo" />
+      <h1>Quality Management</h1>
+      <input type="text" placeholder=" Search..." class="search-bar" />
+      <div>
+        <img src="image/bell.png" alt="notifications"
+          class="admin_logo" />
+        <img src="image/email.png" alt="mail" class="admin_logo" />
+        <img src="image/internet.png" alt="internet" class="admin_logo" />
+        <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+        <span class="user_name">Admin</span>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <div class="tabs" role="tablist">
+        <div class="tab active" role="tab" aria-selected="true"
+          data-tab="overview">Overview</div>
+        <div class="tab" role="tab" aria-selected="false"
+          data-tab="inspections">Inspections</div>
+        <div class="tab" role="tab" aria-selected="false"
+          data-tab="defects">Defects</div>
+        <div class="tab" role="tab" aria-selected="false"
+          data-tab="trends">Trends</div>
+      </div>
+
+      <section class="tab-content active" id="overview" role="tabpanel">
+          <table>
+            <thead>
+              <tr>
+                <th>Inspection
+                  ID</th>
+                <th>Date</th>
+                <th>Inspector</th>
+                <th>Type</th>
+                <th>Result</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>INS-1001</td>
+                <td>2025-05-15</td>
+                <td>John Doe</td>
+                <td>Visual</td>
+                <td>Pass</td>
+                <td>No defects found</td>
+              </tr>
+              <tr>
+                <td>INS-1002</td>
+                <td>2025-05-14</td>
+                <td>Jane Smith</td>
+                <td>Functional</td>
+                <td>Fail</td>
+                <td>Button not working</td>
+              </tr>
+              <tr>
+                <td>INS-1003</td>
+                <td>2025-05-13</td>
+                <td>Emily Lee</td>
+                <td>Dimensional</td>
+                <td>Pass</td>
+                <td>Dimensions within tolerance</td>
+              </tr>
+              <tr>
+                <td>INS-1004</td>
+                <td>2025-05-12</td>
+                <td>Mark Wilson</td>
+                <td>Visual</td>
+                <td>Fail</td>
+                <td>Scratch on
+                  surface</td>
+              </tr>
+              <tr>
+                <td>INS-1005</td>
+                <td>2025-05-11</td>
+                <td>Sarah Kim</td>
+                <td>Functional</td>
+                <td>Pass</td>
+                <td>All functions operational</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <div class="cards-grid">
+          <div class="card green">
+            <h2>Total Inspections</h2>
+            <div class="value">1000</div>
+          </div>
+          <div class="card red">
+            <h2>Total Defects</h2>
+            <div class="value">43</div>
+          </div>
+          <div class="card orange">
+            <h2>Pass Rate</h2>
+            <div class="value">92.5%</div>
+          </div>
+          <div class="card purple">
+            <h2>Average Inspection Time</h2>
+            <div class="value">40 min</div>
+          </div>
+        </div>
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3>Inspections Per Month</h3>
+            <canvas id="inspectionsLineChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Pass vs Fail Status</h3>
+            <canvas id="passFailDoughnutChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="inspections" role="tabpanel">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Total Inspected</th>
+              <th>Passed</th>
+              <th>Failed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-01-01</td>
+              <td>500</td>
+              <td>470</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>2025-02-01</td>
+              <td>520</td>
+              <td>485</td>
+              <td>35</td>
+            </tr>
+            <tr>
+              <td>2025-03-01</td>
+              <td>510</td>
+              <td>480</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>2025-04-01</td>
+              <td>530</td>
+              <td>500</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>2025-05-01</td>
+              <td>515</td>
+              <td>490</td>
+              <td>25</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cards-grid">
+          <div class="card green">
+            <h2>Visual Inspections</h2>
+            <div class="value">600</div>
+          </div>
+          <div class="card orange">
+            <h2>Functional Inspections</h2>
+            <div class="value">350</div>
+          </div>
+          <div class="card purple">
+            <h2>Dimensional Inspections</h2>
+            <div class="value">300</div>
+          </div>
+          <div class="card red">
+            <h2>Other Inspections</h2>
+            <div class="value">100</div>
+          </div>
+        </div>
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3>Inspection Types Distribution</h3>
+            <canvas id="inspectionTypesPieChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Average Inspection Duration</h3>
+            <canvas id="inspectionDurationBarChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="defects" role="tabpanel">
+
+        <table>
+          <thead>
+            <tr>
+              <th>Defect Type</th>
+              <th>Count</th>
+              <th>Severity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scratch</td>
+              <td>210</td>
+              <td>Minor</td>
+            </tr>
+            <tr>
+              <td>Crack</td>
+              <td>130</td>
+              <td>Major</td>
+            </tr>
+            <tr>
+              <td>Paint Issue</td>
+              <td>90</td>
+              <td>Minor</td>
+            </tr>
+            <tr>
+              <td>Misalignment</td>
+              <td>60</td>
+              <td>Critical</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cards-grid">
+          <div class="card red">
+            <h2>Surface Defects</h2>
+            <div class="value">18</div>
+          </div>
+          <div class="card orange">
+            <h2>Functional Defects</h2>
+            <div class="value">15</div>
+          </div>
+          <div class="card purple">
+            <h2>Dimensional Defects</h2>
+            <div class="value">10</div>
+          </div>
+          <div class="card green">
+            <h2>Other Defects</h2>
+            <div class="value">5</div>
+          </div>
+        </div>
+
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3>Defects by Type</h3>
+            <canvas id="defectsByTypeBarChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Defect Severity</h3>
+            <canvas id="defectSeverityPieChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-content" id="trends" role="tabpanel">
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Inspections</th>
+              <th>Pass Rate (%)</th>
+              <th>Fail Rate (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jan</td>
+              <td>450</td>
+              <td>93.3</td>
+              <td>6.7</td>
+            </tr>
+            <tr>
+              <td>Feb</td>
+              <td>460</td>
+              <td>93.5</td>
+              <td>6.5</td>
+            </tr>
+            <tr>
+              <td>Mar</td>
+              <td>470</td>
+              <td>93.6</td>
+              <td>6.4</td>
+            </tr>
+            <tr>
+              <td>Apr</td>
+              <td>490</td>
+              <td>92.9</td>
+              <td>7.1</td>
+            </tr>
+            <tr>
+              <td>May</td>
+              <td>480</td>
+              <td>93.3</td>
+              <td>6.7</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cards-grid">
+          <div class="card green">
+            <h2>Pass Rate Trend</h2>
+            <div class="value">Increasing</div>
+          </div>
+          <div class="card red">
+            <h2>Defect Trend</h2>
+            <div class="value">Decreasing</div>
+          </div>
+          <div class="card purple">
+            <h2>New Issues Trend</h2>
+            <div class="value">Slight Increase</div>
+          </div>
+        </div>
+        <div class="charts-row">
+          <div class="chart-card">
+            <h3>Defect Trend (Last 6 Months)</h3>
+            <canvas id="defectTrendLineChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Pass Rate Trend</h3>
+            <canvas id="passRateTrendLineChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Quality.js"></script>
+  </body>
+</html>

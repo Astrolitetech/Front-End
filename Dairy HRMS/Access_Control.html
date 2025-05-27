@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Access Control System</title>
+        <link rel="stylesheet" href="Access_Control.css" />
+    </head>
+    <body>
+
+        <header class="header">
+            <img src="image/logo.jpg" alt="Logo" class="logo" />
+            <h1>Access Control System</h1>
+            <input type="text" placeholder=" Search..." class="search-bar" />
+            <div>
+              <img src="image/bell.png" alt="notifications"
+                class="admin_logo" />
+              <img src="image/email.png" alt="mail" class="admin_logo" />
+              <img src="image/internet.png" alt="internet" class="admin_logo" />
+              <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+              <span class="user_name">Admin</span>
+            </div>
+          </header>
+
+        <div class="container">
+
+            <div class="cards">
+                <div class="card purple">
+                    <p>Total Users</p>
+                    <h2>124</h2>
+                    <br><span>Active: 118</span>
+                </div>
+                <div class="card blue">
+                    <p>Admins</p>
+                    <h2>8</h2>
+                    <br><span>Last added: 2 days ago</span>
+                </div>
+                <div class="card green">
+                    <p>Sales Team</p>
+                    <h2>45</h2>
+                    <br><span>Active today: 32</span>
+                </div>
+                <div class="card red">
+                    <p>Support</p>
+                    <h2>22</h2>
+                    <br><span>On shift: 12</span>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active"
+                    onclick="showTab('user-management')">User
+                    Management</button>
+                <button class="tab-btn"
+                    onclick="showTab('role-permissions')">Role
+                    Permissions</button>
+                <button class="tab-btn"
+                    onclick="showTab('activity-logs')">Activity Logs</button>
+            </div>
+
+            <!-- User Management Tab -->
+            <div class="tab-content active" id="user-management">
+                <div class="tab-header">
+                    <h3>👤 User Management</h3>
+                    <button class="add-btn" id="openUserPopupBtn">+ Add User</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Last
+                                Active</th><th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John
+                                Smith</td><td>john@example.com</td><td><span
+                                    class="badge blue">Admin</span></td><td><span
+                                    class="badge green">Active</span></td><td>Today,
+                                10:45 AM</td><td class="icon-box"><img src="image/view.png" class="icons"> <img src="image/pencil.png" class="icons"> <img src="image/trash.png" class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>Sarah
+                                Johnson</td><td>sarah@example.com</td><td><span
+                                    class="badge green">Sales</span></td><td><span
+                                    class="badge green">Active</span></td><td>Today,
+                                09:30 AM</td><td class="icon-box"><img src="image/view.png" class="icons"> <img src="image/pencil.png" class="icons"> <img src="image/trash.png" class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>Mike
+                                Brown</td><td>mike@example.com</td><td><span
+                                    class="badge orange">Delivery</span></td><td><span
+                                    class="badge yellow">Pending</span></td><td>Yesterday,
+                                5:30 PM</td><td class="icon-box"><img src="image/view.png" class="icons"> <img src="image/pencil.png" class="icons"> <img src="image/trash.png" class="icons"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="userpopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Supplier</h3>
+                    <form id="userForm">
+                        <label>User Name:</label><br>
+                        <input type="text" id="userName" required
+                            placeholder="Ex. John rich" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Email Id:</label><br>
+                        <input type="email" id="email" required
+                        placeholder="some@gmail.com"
+                            class="inputs"><br><br>
+
+                        <label>Role:</label><br>
+                        <input type="text" id="role" required
+                            placeholder="Admin" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Status:</label><br>
+                        <select class="inputs" required>
+                            <option value="">Select Option</option>
+                            <option value="Active">Active</option>
+                            <option value="Pending">Pending</option>
+                        </select><br><br>
+
+                        <div class="tab-header">
+                            <button type="submit"
+                                class="add-btn">Add</button>
+                            <button type="button" id="closeUserPopupBtn"
+                                class="add-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Role Permissions Tab -->
+            <div class="tab-content" id="role-permissions">
+                <div class="tab-header"><h3>🔐 Role-Based Permissions</h3></div>
+                <div class="roles">
+                    <div>
+                        <h4>Admin</h4>
+                        <label><input type="checkbox" /> Full system
+                            access</label>
+                        <p>Can manage all users, roles, and settings</p>
+                    </div>
+                    <div>
+                        <h4>Sales</h4>
+                        <label><input type="checkbox" checked /> View customer
+                            data</label>
+                        <label><input type="checkbox" checked /> Edit
+                            orders</label>
+                        <label><input type="checkbox" /> Generate
+                            reports</label>
+                    </div>
+                    <div>
+                        <h4>Delivery</h4>
+                        <label><input type="checkbox" checked /> View delivery
+                            routes</label>
+                        <label><input type="checkbox" checked /> Update delivery
+                            status</label>
+                    </div>
+                    <div>
+                        <h4>Customer Support</h4>
+                        <label><input type="checkbox" checked /> Manage
+                            tickets</label>
+                        <label><input type="checkbox" /> Process refunds</label>
+                        <label><input type="checkbox" checked /> Live chat
+                            access</label>
+                    </div>
+                </div>
+                <button class="save-btn">Save Permissions</button>
+            </div>
+
+            <!-- Activity Logs Tab -->
+            <div class="tab-content" id="activity-logs">
+                <div class="tab-header">
+                    <h3>📄 Activity Logs</h3>
+                    <select>
+                        <option>Today</option>
+                        <option>Yesterday</option>
+                        <option>This Week</option>
+                    </select>
+                </div>
+                <ul class="log-list">
+                    <li><strong>User created John Doe with Sales
+                            role</strong><br>Admin User – Today, 10:45 AM<br>IP:
+                        192.168.1.45</li>
+                    <li><strong>Permission updated for Sales
+                            Team</strong><br>Admin User – Today, 09:30 AM<br>IP:
+                        192.168.1.45</li>
+                    <li><strong>Failed login attempt for
+                            mike@example.com</strong><br>System – Today, 08:15
+                        AM<br>IP: 45.23.67.189 (Blocked after 3 attempts)</li>
+                </ul>
+                <p>Showing 1 to 3 of 3 entries</p>
+            </div>
+        </div>
+
+        <div id="overlay" class="popup-bg"></div>
+
+        <script src="Access_Control.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="Inventory.css">
+</head>
+<body>
+
+  <header class="header">
+    <img src="image/logo.jpg" alt="Logo" class="logo" />
+    <h1>Inventory Dashboard</h1>
+    <input type="text" placeholder=" Search..." class="search-bar" />
+    <div>
+      <img src="image/bell.png" alt="notifications" class="admin_logo" />
+      <img src="image/email.png" alt="mail" class="admin_logo" />
+      <img src="image/internet.png" alt="internet" class="admin_logo" />
+      <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+      <span class="user_name">Admin</span>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" onclick="openTab(0)">Inventory Items</div>
+    <div class="tab" onclick="openTab(1)">Stock Levels</div>
+    <div class="tab" onclick="openTab(2)">Restock Requests</div>
+  </div>
+
+  <div id="tab0" class="tab-content active">
+    <table>
+      <thead>
+        <tr><th>Item ID</th><th>Name</th><th>Category</th><th>Supplier</th><th>Quantity</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>IT-001</td><td>Fertilizer A</td><td>Fertilizers</td><td>Supplier X</td><td>150</td></tr>
+        <tr><td>IT-002</td><td>Seed Pack B</td><td>Seeds</td><td>Supplier Y</td><td>200</td></tr>
+        <tr><td>IT-003</td><td>Tractor Parts</td><td>Equipment</td><td>Supplier Z</td><td>50</td></tr>
+        <tr><td>IT-004</td><td>Pesticide C</td><td>Pesticides</td><td>Supplier X</td><td>75</td></tr>
+        <tr><td>IT-005</td><td>Water Pumps</td><td>Equipment</td><td>Supplier Y</td><td>30</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="tab1" class="tab-content">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Current Stock</th><th>Reorder Level</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fertilizer A</td><td>150</td><td>100</td><td>OK</td></tr>
+        <tr><td>Seed Pack B</td><td>200</td><td>150</td><td>OK</td></tr>
+        <tr><td>Tractor Parts</td><td>50</td><td>70</td><td>Low</td></tr>
+        <tr><td>Pesticide C</td><td>75</td><td>80</td><td>Low</td></tr>
+        <tr><td>Water Pumps</td><td>30</td><td>25</td><td>OK</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <table>
+      <thead>
+        <tr><th>Request ID</th><th>Item</th><th>Requested Qty</th><th>Status</th><th>Requested Date</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>RR-101</td><td>Tractor Parts</td><td>40</td><td>Pending</td><td>2025-04-05</td></tr>
+        <tr><td>RR-102</td><td>Pesticide C</td><td>60</td><td>Approved</td><td>2025-04-07</td></tr>
+        <tr><td>RR-103</td><td>Water Pumps</td><td>20</td><td>Pending</td><td>2025-04-08</td></tr>
+        <tr><td>RR-104</td><td>Seed Pack B</td><td>50</td><td>Approved</td><td>2025-04-10</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="charts-container">
+    <div>
+      <h2>Overall Inventory Distribution</h2>
+      <canvas id="overallInventoryChart"></canvas>
+    </div>
+    <div>
+      <h2>Monthly Inventory Overview</h2>
+      <canvas id="monthlyInventoryChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="Inventory.js"></script>
+
+</body>
+</html>

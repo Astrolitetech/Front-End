@@ -1,0 +1,345 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    max-width: 95%;
+}
+
+.header {
+    margin-top: -100px;
+    width: 97%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+img.logo {
+    height: 50px;
+}
+
+img.admin_logo {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.search-bar {
+    height: 30px;
+    width: 350px;
+    border-radius: 15px;
+    color: black;
+    background-color: #d0d7dd;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: skyblue;
+    height: 50px;
+    text-decoration: underline;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.summary-cards {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.purple {
+    background: #6f42c1;
+}
+
+.blue {
+    background: #007bff;
+}
+
+.green {
+    background: #28a745;
+}
+
+.red {
+    background: #dc3545;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+    padding: 8px 16px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.tab-button:hover {
+    background: #78e4ce;
+    color: black;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.add-button {
+    background: #1abc9c;
+    color: white;
+    font: bold;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #78e4ce;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #1abc9c;
+    color: white;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.status.active {
+    background: #28a745;
+}
+
+.status.new {
+    background: #ffc107;
+    color: #333;
+}
+
+.icons {
+    width: 20px;
+}
+
+.payment-container {
+    max-width: 97%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.record-button {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.record-button:hover {
+    background: #1abc9c;
+    color: black;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filters input,
+.filters select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+thead {
+    background: #f2f2f2;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.badge.completed {
+    background-color: #198754;
+    color: white;
+}
+
+.badge.pending {
+    background-color: #ffc107;
+    color: black;
+}
+
+.actions {
+    font-size: 18px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 3px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button.active {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.status.paid {
+    color: green;
+    font-weight: bold;
+}
+
+.status.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.status.accepted {
+    color: green;
+    font-weight: bold;
+}
+
+.status.rejected {
+    color: red;
+    font-weight: bold;
+}
+
+.popup-box {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    width: 30%;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1002;
+    border-radius: 20px;
+}
+
+.popup-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1001;
+}
+
+.popup-header {
+    text-align: center;
+    align-self: center;
+    height: 30px;
+}
+
+.inputs {
+    width: 95%;
+    border-radius: 5px;
+    height: 20px;
+}

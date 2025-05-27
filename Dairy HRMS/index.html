@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dairy HRMS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chartist/dist/chartist.min.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/chartist/dist/chartist.min.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <header class="header">
+        <img src="image/logo.jpg" alt="Logo" class="logo" />
+        <div id="toggleBtn">
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+        </div>
+        <input type="text" placeholder=" Search..." class="search-bar" />
+        <div>
+          <img src="image/bell.png" alt="notifications"
+            class="admin_logo" />
+          <img src="image/email.png" alt="mail" class="admin_logo" />
+          <img src="image/internet.png" alt="internet" class="admin_logo" />
+          <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+          <span class="user_name">Admin</span>
+        </div>
+      </header>
+
+      <div class="sidebar" id="sidebar">
+
+        <a href="customer.html"><button class="action-btn toggle-subUser"><img
+              src="image/customer.png"
+              class="sidebar-icon"> Customers </button></a>
+
+        <a href="Milk.html"><button class="action-btn"><img
+              src="image/truck.png"
+              class="sidebar-icon"> Milk Collection </button></a>
+
+        <a href="Quality.html"><button
+            class="action-btn toggle-subCMR"><img
+              src="image/quality.png"
+              class="sidebar-icon"> Quality Check </button></a>
+
+        <a href="Inventory.html"><button class="action-btn"> <img
+              src="image/product-management.png"
+              class="sidebar-icon"> Inventory </button></a>
+
+        <a href="production.html"><button class="action-btn"> <img
+              src="image/production.png"
+              class="sidebar-icon"> Production </button></a>
+
+        <a href="Supply.html"><button class="action-btn"> <img
+              src="image/cargo.png"
+              class="sidebar-icon"> Supply/Distribution </button></a>
+
+        <a href="Sales.html"><button class="action-btn"> <img
+              src="image/business-and-finance.png"
+              class="sidebar-icon"> Sales </button></a>
+
+        <a href="Revenue.html"><button class="action-btn"> <img
+              src="image/profit.png"
+              class="sidebar-icon"> Revenue </button></a>
+
+        <a href="Investment.html"><button class="action-btn"> <img
+              src="image/return-on-investment.png"
+              class="sidebar-icon"> Investments </button></a>
+
+        <a href="Feedback.html"><button class="action-btn"> <img
+              src="image/feedback.png"
+              class="sidebar-icon"> Feedback/Complaints </button></a>
+
+        <a href="Access_Control.html"><button class="action-btn">
+            <img
+              src="image/security-control.png"
+              class="sidebar-icon"> Access Control </button></a>
+      </div>
+
+      <main class="main-content">
+        <section class="cards">
+          <div class="card">
+            <h3>Milk Collection (Ltrs)</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(230, 102, 70) 0% 30%, rgb(223, 187, 176) 25% 40%,rgb(230, 102, 70) 40% 100%);"></div>
+            <div><img src="image/truck.png" class="icon"></div>
+            <p id="milk-procurement">12,500 L</p>
+          </div>
+          <div class="card">
+            <h3>Sales Revenue (₹)</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(230, 70, 217) 0% 30%, rgb(223, 176, 213) 25% 40%,rgb(230, 70, 217) 40% 100%);"></div>
+            <div><img src="image/troly.png" class="icon"></div>
+            <p id="sales-revenue">₹ 7,80,000</p>
+          </div>
+          <div class="card">
+            <h3>Quality Score (%)</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(70, 230, 97) 0% 100%);"></div>
+            <div><img src="image/quality.png" class="icon"></div>
+            <p id="active-farmers">92</p>
+          </div>
+          <div class="card">
+            <h3>Inventory Stock</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(230, 219, 70) 0% 25%, rgb(223, 220, 176) 25% 40%,rgb(230, 219, 70) 40% 100%);"></div>
+            <div><img src="image/product-management.png" class="icon"></div>
+            <p id="processing-capacity">4,200</p>
+          </div>
+          <div class="card">
+            <h3>Production Units</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(73, 70, 230) 0% 32%, rgb(189, 176, 223) 25% 40%,rgb(73, 70, 230) 40% 100%);"></div>
+            <div><img src="image/production.png" class="icon"></div>
+            <p id="quality-metrics">7,500</p>
+          </div>
+          <div class="card">
+            <h3>Supply Orders</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(70, 230, 163) 0% 25%, rgb(176, 223, 207) 25% 40%,rgb(70, 230, 163) 40% 100%);"></div>
+            <div><img src="image/cargo.png" class="icon"></div>
+            <p id="products-sold">1,200</p>
+          </div>
+          <div class="card">
+            <h3>Customer Feedbacks</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(223, 187, 176) 0% 60%,rgb(230, 102, 70) 60% 75%,rgb(223, 187, 176) 75% 100%);"></div>
+            <div><img src="image/feedback.png" class="icon"></div>
+            <p id="qc-failures">85</p>
+          </div>
+          <div class="card">
+            <h3>Access Control Alerts</h3>
+            <div class="half-circle"
+              style="background: conic-gradient(rgb(223, 176, 213) 0% 60%,rgb(230, 70, 217) 60% 75%,rgb(223, 176, 213) 75% 100%);"></div>
+            <div><img src="image/security-control.png" class="icon"></div>
+            <p id="customer-growth-rate">5</p>
+          </div>
+        </section>
+
+        <section class="graphs">
+          <div class="chart-container">
+            <h2>Milk Procurement Trend (Last 30 Days)</h2>
+            <canvas id="procurementChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h2>Sales Revenue Trend (Last 12 Months)</h2>
+            <canvas id="salesRevenueChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h2>Customer Growth Rate (Last Year)</h2>
+            <canvas id="customerGrowthChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h2>Milk Processing vs Procurement (Last 12 Months)</h2>
+            <canvas id="processingChart"></canvas>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
