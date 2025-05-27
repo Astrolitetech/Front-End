@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Page</title>
+    <link rel="stylesheet" href="customer.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="header">
+        <img src="image/logo.jpg" alt="Logo" class="logo" />
+        <div id="toggleBtn">
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+        </div>
+        <h1 class="title">Customer</h1>
+        <input type="search" placeholder=" Search..." class="search_bar" />
+        <div>
+          <img src="image/bell.png" alt="notifications"
+            class="admin_logo" />
+          <img src="image/email.png" alt="mail" class="admin_logo" />
+          <img src="image/internet.png" alt="internet" class="admin_logo" />
+          <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+          <span class="user_name">Admin</span>
+        </div>
+      </header>
+
+      <div class="basic_info">
+        <hr class="line">
+        <div class="container">
+          <h3 class="box_heading">Basic Information</h3>
+        </div>
+
+        <form onsubmit="return validateForm()">
+
+          <div class="form-group">
+            <label for="textInput">Name (letters only):</label>
+            <input type="text" id="textInput" name="name"
+              placeholder="e.g. John Doe" />
+            <p id="textError" class="error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="numberInput">Phone:</label>
+            <input type="text" id="numberInput" name="phone"
+              placeholder="e.g. 9876543210" />
+            <p id="numberError" class="error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" name="email"
+              placeholder="e.g. john@example.com" />
+            <p id="emailError" class="error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="addressInput">Address:</label>
+            <textarea id="addressInput" name="address" rows="3"
+              placeholder="e.g. 123 Main Street, City, State"></textarea>
+            <p id="addressError" class="error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="dropdownInput">Payment Method</label>
+            <select id="dropdownInput" name="payment_method">
+              <option value>--Select Payment Method--</option>
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank-transfer">Bank Transfer</option>
+            </select>
+            <p id="dropdownError" class="error"></p>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="sub-btn">Submit</button>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="delivery_schedule">
+        <hr class="line">
+        <h3 class="box_heading">Delivery Schedule</h3>
+        <div class="delivery-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Morning</th>
+                <th>Evening</th>
+                <th>Special Instructions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><select><option>Select Liters</option><option>0
+                      Liters</option><option>1 Liter</option><option>2
+                      Liters</option><option>3 Liters</option></select></td>
+                <td><input type="text" placeholder="Instructions"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="invoice-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Invoice #</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Payment Method</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#INV-2023-05</td>
+            <td>May 1, 2023</td>
+            <td>$176.00</td>
+            <td>Credit Card</td>
+            <td><span class="status paid">Paid</span></td>
+            <td>
+              <button class="btn view">View</button>
+              <button class="btn receipt">Receipt</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#INV-2023-04</td>
+            <td>Apr 1, 2023</td>
+            <td>$168.00</td>
+            <td>Bank Transfer</td>
+            <td><span class="status paid">Paid</span></td>
+            <td>
+              <button class="btn view">View</button>
+              <button class="btn receipt">Receipt</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#INV-2023-03</td>
+            <td>Mar 1, 2023</td>
+            <td>$155.00</td>
+            <td>Cash</td>
+            <td><span class="status paid">Paid</span></td>
+            <td>
+              <button class="btn view">View</button>
+              <button class="btn receipt">Receipt</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#INV-2023-06</td>
+            <td>Jun 1, 2023</td>
+            <td>$185.00</td>
+            <td>-</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>
+              <button class="btn reminder">Send Reminder</button>
+              <button class="btn record">Record Payment</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="bottom-buttons">
+        <button class="btn view-all">View All Payments</button>
+        <div class="right-buttons">
+          <button class="btn export">Export to Excel</button>
+          <button class="btn generate">Generate Invoice</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="NAR-container">
+      <hr class="line">
+      <div class="section">
+        <div class="section-header">
+          <span>Notifications & Reminders</span>
+          <button class="btn btn-purple">Send Notification</button>
+        </div>
+
+        <div class="notification">
+          <div class="notification-text">
+            <div class="notification-title">Payment Reminder</div>
+            <div>Invoice #INV-2023-06 of $185.00 is pending since Jun 1,
+              2023</div>
+          </div>
+          <button class="btn btn-purple">Send Now</button>
+        </div>
+
+        <div class="notification">
+          <div class="notification-text">
+            <div class="notification-title">Delivery Update</div>
+            <div>Tomorrow's morning delivery will be 1 hour earlier than
+              usual</div>
+          </div>
+          <button class="btn btn-purple">Notify Customer</button>
+        </div>
+      </div>
+
+      <!-- Notes Section -->
+      <div class="section">
+        <textarea class="NAR-textarea" placeholder="Add new note..."></textarea>
+        <div class="notes-header">
+          <button class="btn btn-purple">Save Note</button>
+        </div>
+
+        <div class="note">
+          <div class="note-text">
+            <div class="note-title">Preference Note</div>
+            <div>Customer prefers early morning deliveries before 7 AM.</div>
+          </div>
+          <div class="note-footer">
+            May 10, 2023
+            <div class="note-actions">
+              <button class="btn btn-outline">Edit</button>
+              <button class="btn btn-red">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          <div class="note-text">
+            <div class="note-title">Feedback</div>
+            <div>Reported issue with milk consistency last week. Check quality
+              this delivery.</div>
+          </div>
+          <div class="note-footer">
+            Apr 28, 2023
+            <div class="note-actions">
+              <button class="btn btn-outline">Edit</button>
+              <button class="btn btn-red">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          <div class="note-text">
+            <div class="note-title">Special Request</div>
+            <div>Will be on vacation from June 1-10. Pause deliveries during
+              this period.</div>
+          </div>
+          <div class="note-footer">
+            Apr 15, 2023
+            <div class="note-actions">
+              <button class="btn btn-outline">Edit</button>
+              <button class="btn btn-red">Delete</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="order-container">
+      <hr class="line">
+
+      <div class="tabs">
+        <div class="tab-button active" onclick="showTab('orders', this)">Recent
+          Orders</div>
+        <div class="tab-button" onclick="showTab('payments', this)">Payment
+          History</div>
+        <div class="tab-button" onclick="showTab('notes', this)">Notes &
+          Remarks</div>
+        <div class="tab-button"
+          onclick="showTab('analytics', this)">Analytics</div>
+      </div>
+
+      <div id="orders" class="tab-content active">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Date</th>
+              <th>Items</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ORD-1005</td>
+              <td>May 10, 2025</td>
+              <td>Standard Milk</td>
+              <td>16 Liters</td>
+              <td>₹48.00</td>
+              <td><span class="status-delivered">Delivered</span></td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>ORD-1004</td>
+              <td>May 3, 2025</td>
+              <td>Low-fat Milk + Curd</td>
+              <td>10 Liters + 3 Packs</td>
+              <td>₹50.00</td>
+              <td><span class="status-delivered">Delivered</span></td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>ORD-1003</td>
+              <td>Apr 28, 2025</td>
+              <td>Organic Milk</td>
+              <td>12 Liters</td>
+              <td>₹40.00</td>
+              <td><span class="status-pending">Pending</span></td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="actions">
+          <button class="btn btn-view">View All Orders</button>
+          <button class="btn btn-purple">Create New Order</button>
+        </div>
+      </div>
+
+      <div id="payments" class="tab-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Payment ID</th>
+              <th>Date</th>
+              <th>Method</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PAY-2003</td>
+              <td>May 10, 2025</td>
+              <td>Credit Card</td>
+              <td>₹48.00</td>
+              <td><span class="status-success">Successful</span></td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>PAY-2002</td>
+              <td>May 3, 2025</td>
+              <td>PayPal</td>
+              <td>₹50.00</td>
+              <td><span class="status-success">Successful</span></td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>PAY-2001</td>
+              <td>Apr 28, 2025</td>
+              <td>Bank Transfer</td>
+              <td>₹40.00</td>
+              <td><span class="status-pending">Pending</span></td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="notes" class="tab-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Note</th>
+              <th>Added By</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>May 14, 2025</td>
+              <td>Ensure curd is fresh and well-packaged before delivery.</td>
+              <td>Admin</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>May 10, 2025</td>
+              <td>Customer requested lactose-free milk option.</td>
+              <td>Support Team</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>May 6, 2025</td>
+              <td>Consider adding almond milk to inventory.</td>
+              <td>Manager</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="analytics" class="tab-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Orders</td>
+              <td>8</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>Total Revenue</td>
+              <td>$345.00</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>Pending Orders</td>
+              <td>2</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+            <tr>
+              <td>Delivered Orders</td>
+              <td>6</td>
+              <td><button class="btn btn-view">View Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <script src="customer.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Milk Collection Dashboard</title>
+        <link rel="stylesheet" href="Milk.css">
+    </head>
+    <body>
+
+        <header class="header">
+            <img src="image/logo.jpg" alt="Logo" class="logo" />
+            <h1>Milk Collection</h1>
+            <input type="text" placeholder=" Search..." class="search-bar" />
+            <div>
+                <img src="image/bell.png" alt="notifications"
+                    class="admin_logo" />
+                <img src="image/email.png" alt="mail" class="admin_logo" />
+                <img src="image/internet.png" alt="internet"
+                    class="admin_logo" />
+                <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+                <span class="user_name">Admin</span>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <div class="summary-cards">
+                <div class="card purple">
+                    <h2>142</h2>
+                    <p>Total Suppliers</p>
+                </div>
+                <div class="card blue">
+                    <h2>1,840L</h2>
+                    <p>Today's Collection</p>
+                </div>
+                <div class="card green">
+                    <h2>A-</h2>
+                    <p>Avg. Quality</p>
+                </div>
+                <div class="card red">
+                    <h2>₹84,500</h2>
+                    <p>Pending Payments</p>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button active"
+                    onclick="showTab('tab1', this)">Suppliers</button>
+                <button class="tab-button" onclick="showTab('tab2', this)">Milk
+                    Collection</button>
+                <button class="tab-button"
+                    onclick="showTab('tab3', this)">Quality Control</button>
+                <button class="tab-button"
+                    onclick="showTab('tab4', this)">Payments</button>
+            </div>
+
+            <div id="tab1" class="tab-content active">
+                <div class="header-row">
+                    <h3>Supplier Management</h3>
+                    <button class="add-button" id="openSupplierPopupBtn">+ Add
+                        Supplier</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SUPPLIER ID</th>
+                            <th>NAME</th>
+                            <th>CONTACT</th>
+                            <th>LOCATION</th>
+                            <th>COWS</th>
+                            <th>AVG. YIELD</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SP-1001</td>
+                            <td><strong>Rajesh Patel</strong><br><small>Village
+                                    A</small></td>
+                            <td>9876543210</td>
+                            <td>Village A</td>
+                            <td>5</td>
+                            <td>24.5L</td>
+                            <td><span class="status active">Active</span></td>
+                            <td class="icon-box"><img src="image/view.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>SP-1002</td>
+                            <td><strong>Meena Sharma</strong><br><small>Village
+                                    B</small></td>
+                            <td>8765432109</td>
+                            <td>Village B</td>
+                            <td>8</td>
+                            <td>38.2L</td>
+                            <td><span class="status active">Active</span></td>
+                            <td class="icon-box"><img src="image/view.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>SP-1003</td>
+                            <td><strong>Vijay Kumar</strong><br><small>Village
+                                    C</small></td>
+                            <td>7654321098</td>
+                            <td>Village C</td>
+                            <td>12</td>
+                            <td>52.7L</td>
+                            <td><span class="status new">New</span></td>
+                            <td class="icon-box"><img src="image/view.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>SP-1004</td>
+                            <td><strong>Sunita Devi</strong><br><small>Village
+                                    A</small></td>
+                            <td>6543210987</td>
+                            <td>Village A</td>
+                            <td>6</td>
+                            <td>29.8L</td>
+                            <td></td>
+                            <td class="icon-box"><img src="image/view.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="supplierpopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Supplier</h3>
+                    <form id="supplierForm">
+                        <label>Supplier ID:</label><br>
+                        <input type="text" id="supplierId" required
+                            placeholder="Value like SP-1010"
+                            pattern="SP-[0-9]{4}"
+                            class="inputs"><br><br>
+
+                        <label>Name:</label><br>
+                        <input type="text" id="supplierName" required
+                            placeholder="Ex. Jhon rich" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Contact:</label><br>
+                        <input type="text" id="contact" required
+                            placeholder="Ex. 9876543210" pattern="[0-9]{10}"
+                            class="inputs"><br><br>
+
+                        <label>Location:</label><br>
+                        <input type="text" id="location" required
+                            placeholder="Ex. Mumbai" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Cows:</label><br>
+                        <input type="number" id="cows" required pattern="[0-9]"
+                            placeholder="Value like 5"
+                            class="inputs"><br><br>
+
+                        <label>Avg. Yield (L):</label><br>
+                        <input type="text" id="yield" required
+                            placeholder="Value like 10.6L"
+                            pattern="[0-9]+(\.[0-9]+)?L"
+                            class="inputs"><br><br>
+
+                        <label>Status:</label><br>
+                        <select class="inputs" id="status" required>
+                            <option value>Select option</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                            <option value="New">New</option>
+                            <option value="Hold">Hold</option>
+                        </select><br><br>
+
+                        <div class="header-row">
+                            <button type="submit"
+                                class="add-button">Add</button>
+                            <button type="button" id="closeSupplierPopupBtn"
+                                class="add-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content">
+                <div class="header-row">
+                    <h3>Milk Collection</h3>
+                    <button class="add-button" id="openMilkPopupBtn">+ Record
+                        Collection</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>SUPPLIER</th>
+                            <th>SHIFT</th>
+                            <th>QUANTITY (L)</th>
+                            <th>FAT %</th>
+                            <th>SNF %</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-05-12</td>
+                            <td>Rajesh Patel</td>
+                            <td>Morning</td>
+                            <td>25</td>
+                            <td>4.2</td>
+                            <td>8.5</td>
+                            <td><span
+                                    class="status accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-05-12</td>
+                            <td>Meena Sharma</td>
+                            <td>Evening</td>
+                            <td>30</td>
+                            <td>3.9</td>
+                            <td>8.3</td>
+                            <td><span
+                                    class="status accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-05-12</td>
+                            <td>Vijay Kumar</td>
+                            <td>Morning</td>
+                            <td>18</td>
+                            <td>3.7</td>
+                            <td>8.0</td>
+                            <td><span
+                                    class="status rejected">Rejected</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="milkpopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Collection</h3>
+                    <form id="milkForm">
+                        <label>Date:</label><br>
+                        <input type="date" id="milkdate" required
+                            class="inputs"><br><br>
+
+                        <label>Supplier:</label><br>
+                        <input type="text" id="supplierName" required
+                            placeholder="Ex. Jhon rich" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Shift:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select option</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Evening">Evening</option>
+                        </select><br><br>
+
+                        <label>Quantity:</label><br>
+                        <input type="number" id="milkQuantity" required
+                            placeholder="Value like 7" pattern="[0-9]"
+                            class="inputs"><br><br>
+
+                        <label>Fat:</label><br>
+                        <input type="number" id="milkFat" required
+                            placeholder="Value like 5.2"
+                            pattern="[0-9]+(.\[0-9])"
+                            class="inputs"><br><br>
+
+                        <label>SNF:</label><br>
+                        <input type="number" id="snf" required
+                            placeholder="Value like 5.2"
+                            pattern="[0-9]+(.\[0-9])"
+                            class="inputs"><br><br>
+
+                        <label>Status:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select option</option>
+                            <option value="Accepted">Accepted</option>
+                            <option value="Rejected">Rejected</option>
+                        </select><br><br>
+
+                        <div class="header-row">
+                            <button type="submit"
+                                class="add-button">Add</button>
+                            <button type="button" id="closeMilkPopupBtn"
+                                class="add-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="tab3" class="tab-content">
+                <div class="header-row">
+                    <h3>Quality Control</h3>
+                    <button class="add-button" id="openQualityPopupBtn">+ Add
+                        Test Result</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>SUPPLIER</th>
+                            <th>TEST</th>
+                            <th>RESULT</th>
+                            <th>REMARKS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-05-12</td>
+                            <td>Rajesh Patel</td>
+                            <td>Methylene Blue</td>
+                            <td><span class="status paid">Pass</span></td>
+                            <td>Good quality</td>
+                        </tr>
+                        <tr>
+                            <td>2025-05-12</td>
+                            <td>Meena Sharma</td>
+                            <td>Adulteration</td>
+                            <td><span class="status paid">Pass</span></td>
+                            <td>Clean sample</td>
+                        </tr>
+                        <tr>
+                            <td>2025-05-12</td>
+                            <td>Vijay Kumar</td>
+                            <td>Acidity</td>
+                            <td><span class="status pending">Fail</span></td>
+                            <td>Spoiled</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="qualitypopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Test Result</h3>
+                    <form id="qualityForm">
+                        <label>Date:</label><br>
+                        <input type="date" id="qualityDate" required
+                            class="inputs"><br><br>
+
+                        <label>Supplier:</label><br>
+                        <input type="text" id="supplierName" required
+                            placeholder="Ex. Jhon rich" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Test:</label><br>
+                        <input type="text" id="test" required
+                            placeholder="Ex. Acidity" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Result:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select option</option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select><br><br>
+
+                        <label>Remarks:</label><br>
+                        <input type="text" id="remarks" required
+                            placeholder="Ex. Clean sample" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <div class="header-row">
+                            <button type="submit"
+                                class="add-button">Add</button>
+                            <button type="button" id="closeQualityPopupBtn"
+                                class="add-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="tab4" class="tab-content">
+                <div class="header-row">
+                    <h3>Payments</h3>
+                    <button class="add-button" id="openPaymentsPopupBtn">+
+                        Record Payment</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>SUPPLIER</th>
+                            <th>AMOUNT (₹)</th>
+                            <th>MODE</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-05-10</td>
+                            <td>Rajesh Patel</td>
+                            <td>₹1,850</td>
+                            <td>Bank Transfer</td>
+                            <td><span class="status paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-05-10</td>
+                            <td>Meena Sharma</td>
+                            <td>₹2,340</td>
+                            <td>UPI</td>
+                            <td><span class="status paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-05-10</td>
+                            <td>Vijay Kumar</td>
+                            <td>₹2,750</td>
+                            <td>Cheque</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="paymentspopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Payment</h3>
+                    <form id="paymentsForm">
+                        <label>Date:</label><br>
+                        <input type="date" id="paymentdate" required
+                            class="inputs"><br><br>
+
+                        <label>Supplier:</label><br>
+                        <input type="text" id="supplierName" required
+                            placeholder="Ex. Jhon rich" pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Amount:</label><br>
+                        <input type="number" id="amount" required
+                            placeholder="Ex. 2000" pattern="[0-9]"
+                            class="inputs"><br><br>
+
+                        <label>Payment Mode:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select Option</option>
+                            <option value="UPI">UPI</option>
+                            <option value="Bank">Bank Transfer</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="Card">Card</option>
+                        </select><br><br>
+
+                        <label>Status:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select Option</option>
+                            <option value="Paid">Paid</option>
+                            <option value="Pending">Pending</option>
+                        </select><br><br>
+
+                        <div class="header-row">
+                            <button type="submit"
+                                class="add-button">Add</button>
+                            <button type="button" id="closePaymentsPopupBtn"
+                                class="add-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="payment-container">
+                <div class="header-row">
+                    <h2>Payment Records</h2>
+                    <button class="record-button" id="openPaymentPopupBtn">+
+                        Record Payment</button>
+                </div>
+
+                <div class="filters">
+                    <input type="date" value="2023-07-01">
+                    <input type="date" value="2023-07-20">
+                    <select>
+                        <option>All Suppliers</option>
+                    </select>
+                    <select>
+                        <option>All Status</option>
+                    </select>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PAYMENT ID</th>
+                            <th>DATE</th>
+                            <th>SUPPLIER</th>
+                            <th>AMOUNT</th>
+                            <th>METHOD</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PY-2023-07-19</td>
+                            <td>19 Jul 2023</td>
+                            <td>Rajesh Patel</td>
+                            <td>₹5,420</td>
+                            <td>Bank Transfer</td>
+                            <td><span
+                                    class="badge completed">Completed</span></td>
+                            <td class="icon-box"><img src="image/clipboard.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>PY-2023-07-18</td>
+                            <td>18 Jul 2023</td>
+                            <td>Meena Sharma</td>
+                            <td>₹8,320</td>
+                            <td>UPI</td>
+                            <td><span
+                                    class="badge completed">Completed</span></td>
+                            <td class="icon-box"><img src="image/clipboard.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>PY-2023-07-17</td>
+                            <td>17 Jul 2023</td>
+                            <td>Vijay Kumar</td>
+                            <td>₹11,560</td>
+                            <td>Cash</td>
+                            <td><span
+                                    class="badge completed">Completed</span></td>
+                            <td class="icon-box"><img src="image/clipboard.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>PY-2023-07-16</td>
+                            <td>16 Jul 2023</td>
+                            <td>Sunita Devi</td>
+                            <td>₹6,240</td>
+                            <td>Bank Transfer</td>
+                            <td><span
+                                    class="badge completed">Completed</span></td>
+                            <td class="icon-box"><img src="image/clipboard.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                        <tr>
+                            <td>PY-2023-07-15</td>
+                            <td>15 Jul 2023</td>
+                            <td>New Supplier</td>
+                            <td>₹3,120</td>
+                            <td>Pending</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td class="icon-box"><img src="image/clipboard.png"
+                                    class="icons"> <img src="image/pencil.png"
+                                    class="icons"> <img src="image/trash.png"
+                                    class="icons"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="footer">
+                    <p>Showing 1 to 5 of 12 entries</p>
+                    <div class="pagination">
+                        <button disabled>Previous</button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>Next</button>
+                    </div>
+                </div>
+
+                <div id="paymentpopupForm" class="popup-box">
+                    <h3 class="popup-header">Add New Payment</h3>
+                    <form id="paymentForm">
+                        <label>Payment ID:</label><br>
+                        <input type="text" id="paymentId" required
+                            placeholder="Ex. Value like PY-12345678"
+                            pattern="PY-[0-9]{8}"
+                            class="inputs"><br><br>
+
+                        <label>Date:</label><br>
+                        <input type="date" id="paymentDate" required
+                            class="inputs"><br><br>
+
+                        <label>Supplier:</label><br>
+                        <input type="text" id="supplier" required
+                            placeholder="Ex. Value like Jhon rich"
+                            pattern="[A-Za-z\s]+"
+                            class="inputs"><br><br>
+
+                        <label>Amount:</label><br>
+                        <input type="number" id="amount" required
+                            placeholder="Ex. Value like 5436" pattern="[0-9]"
+                            class="inputs"><br><br>
+
+                        <label>Method:</label><br>
+                        <select class="inputs" required>
+                            <option value>Select Option</option>
+                            <option value="UPI">UPI</option>
+                            <option value="Bank">Bank Transfer</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="Card">Card</option>
+                        </select><br><br>
+
+                        <label>Status:</label><br>
+                        <select class="inputs" required>
+                            <option value="">Select Option</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Pending">Pending</option>
+                        </select><br><br>
+
+                        <div class="header-row">
+                            <button type="submit"
+                                class="record-button">Add</button>
+                            <button type="button" id="closePaymentPopupBtn"
+                                class="record-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="overlay" class="popup-bg"></div>
+
+            <script src="Milk.js"></script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Supply Dashboard</title>
+        <link rel="stylesheet" href="Supply.css">
+    </head>
+    <body>
+
+        <header class="header">
+            <img src="image/logo.jpg" alt="Logo" class="logo" />
+            <h1>Supply / Distribution</h1>
+            <input type="text" placeholder=" Search..." class="search-bar" />
+            <div>
+                <img src="image/bell.png" alt="notifications"
+                    class="admin_logo" />
+                <img src="image/email.png" alt="mail" class="admin_logo" />
+                <img src="image/internet.png" alt="internet"
+                    class="admin_logo" />
+                <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+                <span class="user_name">Admin</span>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(0)">Overall Supply
+                Distribution</div>
+            <div class="tab" onclick="openTab(1)">Seed Supply Status</div>
+            <div class="tab" onclick="openTab(2)">Supplier Performance</div>
+        </div>
+
+        <div id="tab0" class="tab-content active">
+            <h2>Overall Supply Distribution</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Supplier</th>
+                        <th>Region</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Fertilizers</td><td>1200</td><td>Supplier
+                            A</td><td>North</td></tr>
+                    <tr><td>Seeds</td><td>900</td><td>Supplier
+                            B</td><td>South</td></tr>
+                    <tr><td>Pesticides</td><td>450</td><td>Supplier
+                            C</td><td>East</td></tr>
+                    <tr><td>Equipment</td><td>700</td><td>Supplier
+                            D</td><td>West</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab1" class="tab-content">
+            <h2>Seed Supply Status</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seed Type</th>
+                        <th>Quantity Available</th>
+                        <th>Quality Status</th>
+                        <th>Last Inspection Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Corn</td><td>300</td><td>Good</td><td>2025-05-10</td></tr>
+                    <tr><td>Wheat</td><td>250</td><td>Fair</td><td>2025-05-08</td></tr>
+                    <tr><td>Soybean</td><td>200</td><td>Good</td><td>2025-05-12</td></tr>
+                    <tr><td>Rice</td><td>150</td><td>Poor</td><td>2025-05-01</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2>Supplier Performance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Supplier</th>
+                        <th>On-Time Delivery %</th>
+                        <th>Quality Score</th>
+                        <th>Number of Orders</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Supplier
+                            A</td><td>95%</td><td>8.7</td><td>120</td></tr>
+                    <tr><td>Supplier
+                            B</td><td>88%</td><td>7.9</td><td>98</td></tr>
+                    <tr><td>Supplier
+                            C</td><td>92%</td><td>8.2</td><td>75</td></tr>
+                    <tr><td>Supplier
+                            D</td><td>85%</td><td>7.5</td><td>110</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="charts-container">
+            <div>
+                <h2>Overall Supply Distribution Chart</h2>
+                <canvas id="overallSupplyChart"></canvas>
+            </div>
+            <div>
+                <h2>Seed Supply Status Chart</h2>
+                <canvas id="seedSupplyChart"></canvas>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="Supply.js"></script>
+
+    </body>
+</html>

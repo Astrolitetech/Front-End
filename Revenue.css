@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+}
+
+.header {
+    margin-top: -90px;
+    width: 97%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+img.logo {
+    height: 50px;
+}
+
+img.admin_logo {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.search-bar {
+    height: 30px;
+    width: 350px;
+    border-radius: 15px;
+    color: black;
+    background-color: #d0d7dd;
+}
+
+.section {
+    max-width: 97%;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+    background: linear-gradient(45deg, #78e4ce, #1abc9c);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.card p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+img.full-width {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #1abc9c;
+    color: white;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+form input,
+form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #1abc9c;
+    color: white;
+    grid-column: span 2;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #78e4ce;
+    color: black;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}

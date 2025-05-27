@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="Sales.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="image/logo.jpg" alt="Logo" class="logo" />
+      <h1>Sales</h1>
+      <input type="text" placeholder=" Search..." class="search-bar" />
+      <div>
+        <img src="image/bell.png" alt="notifications"
+          class="admin_logo" />
+        <img src="image/email.png" alt="mail" class="admin_logo" />
+        <img src="image/internet.png" alt="internet"
+          class="admin_logo" />
+        <img src="image/user_logo.jpg" alt="Admin" class="admin_logo" />
+        <span class="user_name">Admin</span>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="cards">
+        <div class="card blue">
+          <h2>Total Sales</h2>
+          <div class="value">$120,000</div>
+        </div>
+        <div class="card sky">
+          <h2>Monthly Revenue</h2>
+          <div class="value">$25,000</div>
+        </div>
+        <div class="card orange">
+          <h2>Returns</h2>
+          <div class="value">$2,000</div>
+        </div>
+        <div class="card purple">
+          <h2>Conversion Rate</h2>
+          <div class="value">3.5%</div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <div class="table-header">
+          <h3>Recent Orders</h3>
+          <input type="search" placeholder="Search Orders">
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>001</td><td>Alice</td><td>Organic
+                Milk</td><td>₹12</td><td><span
+                  class="tag positive">Delivered</span></td></tr>
+            <tr><td>002</td><td>Bob</td><td>Fresh
+                Eggs</td><td>₹6</td><td><span
+                  class="tag negative">Returned</span></td></tr>
+            <tr><td>003</td><td>Charlie</td><td>Raw
+                Honey</td><td>₹18</td><td><span
+                  class="tag service">Processing</span></td></tr>
+            <tr><td>004</td><td>Dana</td><td>Goat
+                Cheese</td><td>₹14</td><td><span
+                  class="tag positive">Delivered</span></td></tr>
+            <tr><td>005</td><td>Eva</td><td>Cow
+                Ghee</td><td>₹20</td><td><span
+                  class="tag positive">Delivered</span></td></tr>
+            <tr><td>006</td><td>Frank</td><td>Paneer</td><td>₹10</td><td><span
+                  class="tag service">Processing</span></td></tr>
+            <tr><td>007</td><td>Grace</td><td>Fresh
+                Cream</td><td>₹9</td><td><span
+                  class="tag positive">Delivered</span></td></tr>
+            <tr><td>008</td><td>Hank</td><td>Butter</td><td>₹11</td><td><span
+                  class="tag service">Processing</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="analytics-section">
+        <div class="chart-box">
+          <h3>Monthly Sales</h3>
+          <canvas id="monthlySalesChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <h3>Sales by Category</h3>
+          <canvas id="categoryChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="Sales.js"></script>
+  </body>
+
+</html>
