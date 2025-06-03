@@ -5,7 +5,7 @@ import Header from '../component/Header';
 const Milk = () => {
   return (
     <>
-      <Header title="About Us" />
+      <Header title="Milk Collection" />
       <main>
         <p>This is the Milk page.</p>
       </main>

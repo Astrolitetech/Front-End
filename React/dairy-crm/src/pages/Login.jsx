@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
 
 function LoginPage() {
     const [loginId, setLoginId] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Add authentication logic here
-        alert(`Login ID: ${loginId}\nPassword: ${password}`);
+
+        // Placeholder login logic
+        if (loginId === "Hai" && password === "hello") {
+            navigate('/dashboard'); // Redirect to dashboard
+        } else {
+            alert('Enter Login ID and Password');
+        }
     };
 
     return (
