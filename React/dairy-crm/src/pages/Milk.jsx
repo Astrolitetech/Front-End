@@ -6,7 +6,7 @@ const Milk = () => {
   return (
     <>
       <Header title="Milk Collection" />
-      <main>
+      <main className='body'>
         <p>This is the Milk page.</p>
       </main>
     </>
