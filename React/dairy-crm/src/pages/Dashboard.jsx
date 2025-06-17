@@ -6,9 +6,9 @@ import '../styles/dashboard.css'
 const Dashboard = () => {
   return (
     <>
-      <Header title="Home Page" />
+      <Header title="Dashboard" />
       <main className='body'>
-        <p>Welcome to the Home Page!</p>
+        <p>Welcome to the Main Page!</p>
         <div>
           <div>
             <p>Welcome to my page</p>
