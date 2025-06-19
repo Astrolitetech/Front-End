@@ -22,6 +22,11 @@
     margin-bottom: 10px;
 }
 
+.avatar.expanded {
+    width: 20px;
+    height: 20px;
+}
+
 .nav-link.active {
     opacity: 1;
     border-left: 4px solid #FF6B6B;
@@ -47,11 +52,12 @@
 .logo {
     height: 40px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .sidebar-header {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .sidebar.expanded {
