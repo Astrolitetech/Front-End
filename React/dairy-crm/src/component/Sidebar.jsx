@@ -25,7 +25,7 @@ const Sidebar = () => {
     return (
         <div className={`sidebar ${expanded ? 'expanded' : 'collapsed'}`}>
             <div>
-                {expanded ? <div className='sidebar-header'><img src={logo} className='logo' /><CircleUser className='avatar.expanded' /></div> : <CircleUser className='avatar' />}
+                {expanded ? <div className='sidebar-header'><img src={logo} className='logo' alt='logo' /><CircleUser className='avatar.expanded' /></div> : <CircleUser className='avatar' />}
             </div>
             <nav className="nav-menu">
                 {menuItems.map((item) => (
