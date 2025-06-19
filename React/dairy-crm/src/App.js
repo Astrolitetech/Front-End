@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/app.css';
 import Sidebar from './component/Sidebar';
 import Dashboard from './pages/Dashboard';
 import Milk from './pages/Milk';
