@@ -183,7 +183,7 @@ const Inventory = () => {
         { setting: 'Email Alerts', enabled: 1 },
         { setting: 'Auto Reorder', enabled: 0 },
         { setting: 'Low Stock Notification', enabled: 1 },
-        { setting: 'Dark Mode', enabled: 0 },
+        { setting: 'SMS Notifications', enabled: 0 },
     ]);
 
     const handleToggleSetting = idx => {
