@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/CRMContent.css";
-import "../styles/AddCustomerModal.css";
 
 const metrics = [
   { title: "Total Farmers", value: "2", change: "+12%", color: "green" },
