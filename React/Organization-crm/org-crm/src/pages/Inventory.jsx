@@ -204,15 +204,24 @@ const Inventory = () => {
         </table>
     );
 
+    // Stacked bar chart for settings (enabled/disabled)
+    const settingsStackedData = settingsData.map(s => ({
+        name: s.setting,
+        Enabled: s.enabled ? 1 : 0,
+        Disabled: s.enabled ? 0 : 1
+    }));
+
     const renderSettingsGraphs = () => (
         <div style={{ width: '100%', minHeight: 320 }}>
-            <h4>Settings Overview</h4>
+            <h4>Settings Status (Stacked Bar)</h4>
             <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={settingsData} layout="vertical">
+                <BarChart data={settingsStackedData} layout="vertical">
                     <XAxis type="number" domain={[0, 1]} ticks={[0, 1]} tickFormatter={v => (v ? 'Enabled' : 'Disabled')} />
-                    <YAxis dataKey="setting" type="category" width={180} />
+                    <YAxis dataKey="name" type="category" width={180} />
                     <Tooltip formatter={v => (v ? 'Enabled' : 'Disabled')} />
-                    <Bar dataKey="enabled" fill="#8884d8" name="Enabled" />
+                    <Legend />
+                    <Bar dataKey="Enabled" stackId="a" fill="#4caf50" name="Enabled" />
+                    <Bar dataKey="Disabled" stackId="a" fill="#e57373" name="Disabled" />
                 </BarChart>
             </ResponsiveContainer>
         </div>
