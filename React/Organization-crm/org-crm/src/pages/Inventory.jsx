@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Check, X } from 'lucide-react';
 import '../styles/Inventory.css';
 import {
     BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell, ResponsiveContainer
@@ -178,12 +179,16 @@ const Inventory = () => {
     );
 
     // Dummy data and graphs for Settings tab
-    const settingsData = [
+    const [settingsData, setSettingsData] = useState([
         { setting: 'Email Alerts', enabled: 1 },
         { setting: 'Auto Reorder', enabled: 0 },
         { setting: 'Low Stock Notification', enabled: 1 },
         { setting: 'Dark Mode', enabled: 0 },
-    ];
+    ]);
+
+    const handleToggleSetting = idx => {
+        setSettingsData(prev => prev.map((row, i) => i === idx ? { ...row, enabled: row.enabled ? 0 : 1 } : row));
+    };
 
     const renderSettingsTable = () => (
         <table className="settings-table" style={{ marginBottom: '30px', width: '100%' }}>
@@ -197,7 +202,41 @@ const Inventory = () => {
                 {settingsData.map((row, idx) => (
                     <tr key={idx}>
                         <td>{row.setting}</td>
-                        <td>{row.enabled ? 'Enabled' : 'Disabled'}</td>
+                        <td>
+                            <button
+                                onClick={() => handleToggleSetting(idx)}
+                                style={{
+                                    background: row.enabled ? '#4caf50' : '#e57373',
+                                    color: 'white',
+                                    border: 'none',
+                                    borderRadius: '16px',
+                                    width: '60px',
+                                    height: '28px',
+                                    cursor: 'pointer',
+                                    fontWeight: 600,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: '4px',
+                                    padding: '0 8px'
+                                }}
+                            >
+                                {row.enabled
+                                    ? <>
+                                        {'On'}
+                                        <span style={{background: 'white', borderRadius: '50%', padding: 2, marginLeft: 4, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                            <Check size={16} style={{color: row.enabled ? '#4caf50' : '#e57373', verticalAlign:'middle'}} />
+                                        </span>
+                                    </>
+                                    : <>
+                                        <span style={{background: 'white', borderRadius: '50%', padding: 2, marginRight: 4, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                            <X size={16} style={{color: row.enabled ? '#4caf50' : '#e57373', verticalAlign:'middle'}} />
+                                        </span>
+                                        {'Off'}
+                                    </>
+                                }
+                            </button>
+                        </td>
                     </tr>
                 ))}
             </tbody>
