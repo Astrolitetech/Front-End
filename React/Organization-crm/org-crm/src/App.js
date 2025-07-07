@@ -10,6 +10,7 @@ import MilkProduction from "./pages/MilkProduction";
 import Welcome from "./pages/Welcome";
 import Inventory from "./pages/Inventory";
 import Settings from "./pages/Settings";
+import Reports from "./pages/Reports";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -35,6 +36,7 @@ const App = () => {
               <Route path="/milk-production" element={<MilkProduction />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/settings" element={<Settings darkMode={darkMode} setDarkMode={setDarkMode} />} />
+              <Route path="/reports" element={<Reports />} />
             </Routes>
           </div>
         </div>
