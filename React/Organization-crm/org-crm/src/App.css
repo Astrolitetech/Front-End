@@ -23,11 +23,13 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #121212;
+  transition: background 1s, color 1s;
 }
 
 body.dark {
   background-color: #23272f;
   color: #e0e0e0;
+  transition: background 1s, color 1s;
 }
 
 body.dark input,
@@ -63,7 +65,6 @@ body.dark ::-webkit-scrollbar-thumb {
   text-align: center;
   font-weight: 800;
   font-size: 2.2rem;
-  margin-bottom: 32px;
   letter-spacing: 1.2px;
   box-shadow: 0 2px 12px 0 rgba(33, 150, 243, 0.08);
 }
@@ -80,4 +81,24 @@ body.dark .app {
 
 body.dark .main {
   background-color: #23272f;
+}
+
+/* Unified page container for all pages */
+.page-container {
+  margin-top: 60px;
+  width: 94%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 16px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  min-height: 80vh;
+  box-shadow: 0 2px 12px 0 rgba(33, 150, 243, 0.04);
+}
+
+body.dark .page-container {
+  background: #23272f;
+  color: #e0e0e0;
+  box-shadow: 0 2px 12px 0 rgba(33, 150, 243, 0.10);
 }

@@ -93,7 +93,7 @@ const Settings = ({ darkMode, setDarkMode }) => {
     };
 
     return (
-        <div className="settings-container">
+        <div className="page-container">
             <div className="page-header">
                 <h2>User Preferences</h2>
             </div>

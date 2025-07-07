@@ -55,7 +55,7 @@ const Dashboard = () => {
     ];
 
     return (
-        <div className="dashboard">
+        <div className="page-container">
             <div className="page-header">
                 <h2>Dairy Farm Dashboard <Wheat className='icon' /></h2>
             </div>

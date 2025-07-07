@@ -4,8 +4,8 @@ import '../styles/Welcome.css';
 
 function Welcome() {
     return (
-        <div className="welcome-container">
-        <img src={logo} alt="logo" className="welcome-logo" />
+        <div className="page-container">
+            <img src={logo} alt="logo" className="welcome-logo" />
 
             <section className="about">
                 <h1>Welcome to My Dairy Farm</h1>

@@ -1,4 +1,3 @@
-/* --- Modal Styles (migrated from AddCustomerModal.css) --- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -112,11 +111,6 @@ body.dark .error-text {
   color: #f87171;
 }
 /* --- End Modal Styles --- */
-
-.crm-content {
-  margin-top: 60px;
-  height: 100%;
-}
 
 .metrics {
   display: flex;
@@ -239,11 +233,6 @@ body.dark .card {
 body.dark .card-title {
   color: #a1a1aa;
   /* softer gray */
-}
-
-body.dark .crm-content {
-  background: #23272f;
-  color: #e0e0e0;
 }
 
 body.dark .card-change {

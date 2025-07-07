@@ -1,12 +1,12 @@
-.inventory-container {
-  margin-top: 60px;
-  background: #f8f9fa;
-}
+/* Remove .inventory-container, now using .page-container from App.css */
+
 .headings {
   display: flex;
   gap: 16px;
+  margin-left: 20px;
   margin-bottom: 24px;
 }
+
 .heading {
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -16,40 +16,50 @@
   font-weight: 600;
   color: #34495e;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-.heading.active {
-  background: #4caf50;
-  color: #fff;
-  border-color: #4caf50;
 }
 
-.inventory-table, .report-table, .settings-table {
+.heading.active {
+  background: transparent;
+  color: orangered;
+  border-bottom: 4px solid orangered;
+}
+
+.inventory-table,
+.report-table,
+.settings-table {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
 }
-.inventory-table th, .report-table th, .settings-table th {
+
+.inventory-table th,
+.report-table th,
+.settings-table th {
   background: #f5f5f5;
   color: #34495e;
   font-weight: 700;
   padding: 12px 8px;
   text-align: left;
 }
-.inventory-table td, .report-table td, .settings-table td {
+
+.inventory-table td,
+.report-table td,
+.settings-table td {
   padding: 10px 8px;
   color: #222;
   border-bottom: 1px solid #eee;
 }
+
 .inventory-table tr.low-stock td {
   background: #fff3e0;
   color: #e65100;
 }
 
-.settings-table .toggle-btn, .settings-table button {
+.settings-table .toggle-btn,
+.settings-table button {
   background: #e57373;
   color: white;
   border: none;
@@ -64,15 +74,17 @@
   gap: 4px;
   padding: 0 8px;
   font-size: 1rem;
-  box-shadow: 0 1px 4px 0 rgba(44,62,80,0.08);
+  box-shadow: 0 1px 4px 0 rgba(44, 62, 80, 0.08);
   transition: background 0.2s;
 }
-.settings-table .toggle-btn.on, .settings-table button.on {
+
+.settings-table .toggle-btn.on,
+.settings-table button.on {
   background: #4caf50;
 }
 
 /* Graphs and charts */
-.inventory-container h4 {
+h4 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -80,47 +92,65 @@
 }
 
 /* Dark mode */
-body.dark .inventory-container {
+body.dark {
   background: #23272f;
   color: #e0e0e0;
 }
+
 body.dark .headings .heading {
   background: #232b36;
   color: #e0e0e0;
   border-color: #232b36;
 }
+
 body.dark .headings .heading.active {
-  background: #4caf50;
-  color: #fff;
-  border-color: #4caf50;
+  background: transparent;
+  color: pink;
+  border-bottom: 4px solid pink;
 }
-body.dark .inventory-table, body.dark .report-table, body.dark .settings-table {
+
+body.dark .inventory-table,
+body.dark .report-table,
+body.dark .settings-table {
   background: #111;
   color: #e0e0e0;
-  box-shadow: 0 2px 8px 0 rgba(33,150,243,0.10);
+  box-shadow: 0 2px 8px 0 rgba(33, 150, 243, 0.10);
 }
+
 body.dark .chart-box {
   background: #111;
 }
-body.dark .inventory-table th, body.dark .report-table th, body.dark .settings-table th {
+
+body.dark .inventory-table th,
+body.dark .report-table th,
+body.dark .settings-table th {
   background: #181c1f;
   color: #fff;
 }
-body.dark .inventory-table td, body.dark .report-table td, body.dark .settings-table td {
+
+body.dark .inventory-table td,
+body.dark .report-table td,
+body.dark .settings-table td {
   color: #e0e0e0;
   border-bottom: 1px solid #232b36;
 }
+
 body.dark .inventory-table tr.low-stock td {
   background: #3e2723;
   color: #ffb300;
 }
-body.dark .settings-table .toggle-btn, body.dark .settings-table button {
+
+body.dark .settings-table .toggle-btn,
+body.dark .settings-table button {
   background: #e57373;
   color: #fff;
 }
-body.dark .settings-table .toggle-btn.on, body.dark .settings-table button.on {
+
+body.dark .settings-table .toggle-btn.on,
+body.dark .settings-table button.on {
   background: #4caf50;
 }
-body.dark .inventory-container h4 {
+
+body.dark h4 {
   color: #fff;
 }

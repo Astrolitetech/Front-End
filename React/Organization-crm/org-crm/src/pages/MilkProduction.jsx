@@ -103,7 +103,7 @@ export default function MilkProduction() {
     }, []);
 
     return (
-        <div className="container">
+        <div className="page-container">
             <div className="page-header">
                 <h2>Dairy Collection Monitor</h2>
             </div>

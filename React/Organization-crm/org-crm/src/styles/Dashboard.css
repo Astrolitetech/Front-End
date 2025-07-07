@@ -1,14 +1,10 @@
-.dashboard {
-    margin-top: 60px;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f8f9fa;
-}
+/* Remove .dashboard, now using .page-container from App.css */
 
 .icon {
     height: 16px;
 }
 
-.dashboard h2 {
+h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #2c3e50;
@@ -48,7 +44,7 @@
 
 /* Dark mode */
 
-body.dark .dashboard {
+body.dark {
     background: #23272f;
     color: #e0e0e0;
     box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
@@ -62,7 +58,7 @@ body.dark .card {
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
 }
 
-body.dark .dashboard h2 {
+body.dark h2 {
     text-align: center;
     margin-bottom: 30px;
     color: white;

@@ -113,7 +113,7 @@ const AddCustomerModal = ({ isOpen, onClose }) => {
 const CRMContent = () => {
   const [showCustomerModal, setShowCustomerModal] = useState(false);
   return (
-    <div className="crm-content">
+    <div className="page-container">
       <div className="page-header">
         <h2>Customer Relationship Management</h2>
       </div>

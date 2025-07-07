@@ -284,7 +284,7 @@ const Inventory = () => {
     };
 
     return (
-        <div className='inventory-container'>
+        <div className='page-container'>
             <div className='page-header'><h2>Inventory</h2></div>
             <div className='headings'>
                 <button className={`heading ${activeTab === 'Tab1' ? 'active' : ''}`} onClick={() => setActiveTab('Tab1')}>Dashboard</button>
