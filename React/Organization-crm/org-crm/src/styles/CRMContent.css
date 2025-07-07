@@ -1,5 +1,4 @@
 .crm-content {
-  padding: 20px;
   margin-top: 60px;
   height: 100%;
 }
@@ -120,7 +119,7 @@
 /* 🌙 Dark Mode Overrides for CRM Content */
 
 body.dark .card {
-  background: #1e1e1e;
+  background: #111;
   color: #e0e0e0;
   box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
 }
@@ -131,8 +130,8 @@ body.dark .card-title {
 }
 
 body.dark .crm-content {
-  background: black;
-  color: white;
+  background: #23272f;
+  color: #e0e0e0;
 }
 
 body.dark .card-change {

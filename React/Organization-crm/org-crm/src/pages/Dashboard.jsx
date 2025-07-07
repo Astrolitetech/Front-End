@@ -56,28 +56,30 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard">
-            <h2>Dairy Farm Dashboard <Wheat className='icon'/></h2>
+            <div className="page-header">
+                <h2>Dairy Farm Dashboard <Wheat className='icon' /></h2>
+            </div>
             <div className="dashboard-grid">
                 <div className="card small-card">
                     <h4><PawPrint className='icon' /> Cow Health</h4>
                     <ul>
                         <li><BadgeCheck className='icon' /> Healthy: 45</li>
-                        <li><TriangleAlert className='icon'/> Sick: 3</li>
+                        <li><TriangleAlert className='icon' /> Sick: 3</li>
                         <li><Search className='icon' /> Observation: 2</li>
                     </ul>
                 </div>
 
                 <div className="card small-card">
-                    <h4><Calendar className='icon'/> Today's Activities</h4>
+                    <h4><Calendar className='icon' /> Today's Activities</h4>
                     <ul>
-                        <li><Tractor className='icon'/> Feeding: Done</li>
-                        <li><PawPrint className='icon'/> Milking: Done</li>
-                        <li><Hospital className='icon'/> Vet Check: Pending</li>
+                        <li><Tractor className='icon' /> Feeding: Done</li>
+                        <li><PawPrint className='icon' /> Milking: Done</li>
+                        <li><Hospital className='icon' /> Vet Check: Pending</li>
                     </ul>
                 </div>
 
                 <div className="card">
-                    <h4><ClipboardList className='icon'/> Cattle Details</h4>
+                    <h4><ClipboardList className='icon' /> Cattle Details</h4>
                     <table className="table">
                         <thead>
                             <tr>
@@ -101,7 +103,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="card">
-                    <h4><FileChartColumn className='icon'/> Feed Consumption Log</h4>
+                    <h4><FileChartColumn className='icon' /> Feed Consumption Log</h4>
                     <table className="table">
                         <thead>
                             <tr>
@@ -125,12 +127,12 @@ const Dashboard = () => {
                 </div>
 
                 <div className="card">
-                    <h4><ChartLine className='icon'/> Milk Production</h4>
+                    <h4><ChartLine className='icon' /> Milk Production</h4>
                     <Line data={milkData} />
                 </div>
 
                 <div className="card">
-                    <h4><Utensils className='icon'/> Feed Stock</h4>
+                    <h4><Utensils className='icon' /> Feed Stock</h4>
                     <Bar data={feedStockData} />
                 </div>
             </div>

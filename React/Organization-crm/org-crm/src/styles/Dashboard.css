@@ -1,5 +1,4 @@
 .dashboard {
-    padding: 20px;
     margin-top: 60px;
     font-family: 'Segoe UI', sans-serif;
     background: #f8f9fa;
@@ -50,13 +49,13 @@
 /* Dark mode */
 
 body.dark .dashboard {
-    background: #1e1e1e;
+    background: #23272f;
     color: #e0e0e0;
     box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
 }
 
 body.dark .card {
-    background-color: black;
+    background-color: #111;
     padding: 20px;
     border-top: 5px solid pink;
     border-radius: 12px;

@@ -1,79 +1,140 @@
+/* Inventory Page Styles */
+
 .inventory-container {
-    margin-top: 60px;
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 100vh;
 }
 
-.headline {
-    margin: 30px 10px 10px 10px;
-    border-radius: 10px;
-    height: 40px;
-    text-align: center;
-    background: #a1c6df;
+.page-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #2c3e50;
 }
 
 .headings {
-    margin-left: 33%;
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
 }
-
 .heading {
-    font-size: 20px;
-    border-radius: 7px;
-    background: transparent;
-    border: transparent;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #34495e;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
-
 .heading.active {
-    color: orangered;
-    border-bottom: 5px solid orangered;
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
 }
 
-
-
-.inventory-table,
-.report-table,
-.settings-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    margin-top: 15px;
+.inventory-table, .report-table, .settings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+.inventory-table th, .report-table th, .settings-table th {
+  background: #f5f5f5;
+  color: #34495e;
+  font-weight: 700;
+  padding: 12px 8px;
+  text-align: left;
+}
+.inventory-table td, .report-table td, .settings-table td {
+  padding: 10px 8px;
+  color: #222;
+  border-bottom: 1px solid #eee;
+}
+.inventory-table tr.low-stock td {
+  background: #fff3e0;
+  color: #e65100;
 }
 
-.inventory-table th, .inventory-table td,
-.report-table th, .report-table td,
-.settings-table th, .settings-table td {
-    padding: 12px 15px;
-    text-align: center;
+.settings-table .toggle-btn, .settings-table button {
+  background: #e57373;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  width: 72px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 0 8px;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px 0 rgba(44,62,80,0.08);
+  transition: background 0.2s;
+}
+.settings-table .toggle-btn.on, .settings-table button.on {
+  background: #4caf50;
 }
 
-.inventory-table th,
-.report-table th,
-.settings-table th {
-    background-color: #3498db;
-    color: white;
+/* Graphs and charts */
+.inventory-container h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #34495e;
 }
 
-/* Dark */
-
+/* Dark mode */
 body.dark .inventory-container {
-    margin-top: 60px;
-    background: black;
-    color: white;
-    max-height: fit-content;
+  background: #23272f;
+  color: #e0e0e0;
 }
-
-body.dark .heading {
-    background: black;
-    color: white;
+body.dark .page-header h2 {
+  color: #fff;
 }
-
-body.dark .heading.active {
-    color: pink;
-    border-bottom: 5px solid pink;
+body.dark .headings .heading {
+  background: #232b36;
+  color: #e0e0e0;
+  border-color: #232b36;
 }
-
-body.dark .inventory-table th,
-body.dark .report-table th,
-body.dark .settings-table th {
-    color: white;
+body.dark .headings .heading.active {
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}
+body.dark .inventory-table, body.dark .report-table, body.dark .settings-table {
+  background: #111;
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px 0 rgba(33,150,243,0.10);
+}
+body.dark .chart-box {
+  background: #111;
+}
+body.dark .inventory-table th, body.dark .report-table th, body.dark .settings-table th {
+  background: #181c1f;
+  color: #fff;
+}
+body.dark .inventory-table td, body.dark .report-table td, body.dark .settings-table td {
+  color: #e0e0e0;
+  border-bottom: 1px solid #232b36;
+}
+body.dark .inventory-table tr.low-stock td {
+  background: #3e2723;
+  color: #ffb300;
+}
+body.dark .settings-table .toggle-btn, body.dark .settings-table button {
+  background: #e57373;
+  color: #fff;
+}
+body.dark .settings-table .toggle-btn.on, body.dark .settings-table button.on {
+  background: #4caf50;
+}
+body.dark .inventory-container h4 {
+  color: #fff;
 }

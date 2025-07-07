@@ -13,7 +13,7 @@ const metrics = [
 
 
 const AddCustomerModal = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({ name: '',email: '', phone: '', address: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', address: '' });
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -38,7 +38,7 @@ const AddCustomerModal = ({ isOpen, onClose }) => {
       console.log("✅ Customer data:", formData);
       // TODO: handle form submission here
       onClose();
-      setFormData({ name: '',email: '', phone: '', address: '' });
+      setFormData({ name: '', email: '', phone: '', address: '' });
     }
   };
 
@@ -115,9 +115,11 @@ const CRMContent = () => {
   const [showCustomerModal, setShowCustomerModal] = useState(false);
   return (
     <div className="crm-content">
+      <div className="page-header">
+        <h2>Customer Relationship Management</h2>
+      </div>
       <div className="head-line">
         <div className="left-side">
-          <h2>Customer Relationship Management</h2>
           <p>Complete customer & farmer relationship management system</p>
         </div>
         <div className="right-side">

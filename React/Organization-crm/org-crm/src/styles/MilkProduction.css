@@ -5,14 +5,6 @@
     color: #333;
 }
 
-.milk-header {
-    margin: 30px 10px 10px 10px;
-    border-radius: 10px;
-    height: 40px;
-    text-align: center;
-    background: #a1c6df;
-}
-
 .subheader {
     margin-top: 0;
     margin-bottom: 15px;
@@ -119,19 +111,11 @@
 /* Dark mode */
 
 body.dark .container {
-    background: black;
+    background: #23272f;
     margin-top: 60px;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-}
-
-body.dark .milk-header {
-    margin: 30px 10px 10px 10px;
-    border-radius: 15px;
-    height: 40px;
-    text-align: center;
-    background: #91b4c9;
+    color: #e0e0e0;
 }
 
 body.dark .subheader {
@@ -146,7 +130,7 @@ body.dark .subheader {
 body.dark .chart-box {
     flex: 1 1 45%;
     min-width: 300px;
-    background: black;
+    background: #111;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -159,4 +143,9 @@ body.dark .icon {
 body.dark .option-value {
     color: white;
     background: black;
+}
+
+body.dark .card {
+    background: #111;
+    color: #e0e0e0;
 }

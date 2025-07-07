@@ -1,0 +1,141 @@
+.settings-container {
+    width: 94%;
+    margin: 40px auto;
+    padding: 32px;
+}
+
+.settings-container h2 {
+    color: #fff;
+    background: linear-gradient(90deg, #4caf50 0%, #2196f3 100%);
+    padding: 18px 0;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+    letter-spacing: 1.2px;
+    box-shadow: 0 2px 12px 0 rgba(33, 150, 243, 0.08);
+}
+
+.settings-cards {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.settings-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(44, 62, 80, 0.08);
+    margin-bottom: 24px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-left: 6px solid #e57373;
+    transition: border 0.2s;
+}
+
+.settings-card.enabled {
+    border-left: 6px solid #4caf50;
+}
+
+.settings-card .icon-bg {
+    background: #f5f5f5;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.settings-card .card-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.settings-card .card-desc {
+    color: #666;
+    font-size: 0.98rem;
+}
+
+.settings-card .toggle-btn {
+    background: #e57373;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    width: 74px;
+    height: 28px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 0 8px;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px 0 rgba(44, 62, 80, 0.08);
+    transition: background 0.2s;
+}
+
+.settings-card.enabled .toggle-btn {
+    background: #4caf50;
+}
+
+.settings-save-btn {
+    margin-top: 12px;
+    background: linear-gradient(90deg, #4caf50 0%, #2196f3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(33, 150, 243, 0.08);
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    display: block;
+}
+
+body.dark .settings-container {
+    width: 94%;
+    background: #23272f;
+}
+
+body.dark .settings-container h2 {
+    color: #fff;
+    background: linear-gradient(90deg, #232b36 0%, #1e88e5 100%);
+    box-shadow: 0 2px 12px 0 rgba(33, 150, 243, 0.12);
+}
+
+body.dark .settings-card {
+    background: #111;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px 0 rgba(33, 150, 243, 0.10);
+}
+
+body.dark .settings-card .icon-bg {
+    background: #222;
+}
+
+body.dark .settings-card .card-title {
+    color: #fff;
+}
+
+body.dark .settings-card .card-desc {
+    color: #b0b8c1;
+}
+
+body.dark .settings-card .toggle-btn {
+    background: #e57373;
+    color: #fff;
+}
+
+body.dark .settings-card.enabled .toggle-btn {
+    background: #4caf50;
+}
+
+body.dark .settings-save-btn {
+    background: linear-gradient(90deg, #232b36 0%, #1e88e5 100%);
+    color: #fff;
+}

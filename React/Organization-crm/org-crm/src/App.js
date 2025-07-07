@@ -9,6 +9,7 @@ import "./App.css";
 import MilkProduction from "./pages/MilkProduction";
 import Welcome from "./pages/Welcome";
 import Inventory from "./pages/Inventory";
+import Settings from "./pages/Settings";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -33,6 +34,7 @@ const App = () => {
               <Route path="/crm" element={<CRMContent />} />
               <Route path="/milk-production" element={<MilkProduction />} />
               <Route path="/inventory" element={<Inventory />} />
+              <Route path="/settings" element={<Settings darkMode={darkMode} setDarkMode={setDarkMode} />} />
             </Routes>
           </div>
         </div>

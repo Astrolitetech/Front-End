@@ -205,32 +205,18 @@ const Inventory = () => {
                         <td>
                             <button
                                 onClick={() => handleToggleSetting(idx)}
-                                style={{
-                                    background: row.enabled ? '#4caf50' : '#e57373',
-                                    color: 'white',
-                                    border: 'none',
-                                    borderRadius: '16px',
-                                    width: '60px',
-                                    height: '28px',
-                                    cursor: 'pointer',
-                                    fontWeight: 600,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between',
-                                    gap: '4px',
-                                    padding: '0 8px'
-                                }}
+                                className={`toggle-btn${row.enabled ? ' on' : ''}`}
                             >
                                 {row.enabled
                                     ? <>
                                         {'On'}
                                         <span style={{background: 'white', borderRadius: '50%', padding: 2, marginLeft: 4, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                                            <Check size={16} style={{color: row.enabled ? '#4caf50' : '#e57373', verticalAlign:'middle'}} />
+                                            <Check size={16} style={{color: '#4caf50', verticalAlign:'middle'}} />
                                         </span>
                                     </>
                                     : <>
                                         <span style={{background: 'white', borderRadius: '50%', padding: 2, marginRight: 4, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                                            <X size={16} style={{color: row.enabled ? '#4caf50' : '#e57373', verticalAlign:'middle'}} />
+                                            <X size={16} style={{color: '#e57373', verticalAlign:'middle'}} />
                                         </span>
                                         {'Off'}
                                     </>
@@ -299,7 +285,7 @@ const Inventory = () => {
 
     return (
         <div className='inventory-container'>
-            <div><h2 className='headline'>Inventory</h2></div>
+            <div className='page-header'><h2>Inventory</h2></div>
             <div className='headings'>
                 <button className={`heading ${activeTab === 'Tab1' ? 'active' : ''}`} onClick={() => setActiveTab('Tab1')}>Dashboard</button>
                 <button className={`heading ${activeTab === 'Tab2' ? 'active' : ''}`} onClick={() => setActiveTab('Tab2')}>Report</button>

@@ -36,7 +36,7 @@ body {
 }
 
 body.dark {
-  background-color: #121212;
+  background-color: #23272f;
   color: #e0e0e0;
 }
 
@@ -62,4 +62,28 @@ body.dark ::-webkit-scrollbar-thumb {
 
 .theme-toggle:hover {
   opacity: 0.8;
+}
+
+.page-header {
+    margin: 30px 10px 10px 10px;
+    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+    background: #a1c6df;
+}
+
+body.dark .page-header {
+    margin: 30px 10px 10px 10px;
+    border-radius: 15px;
+    height: 40px;
+    text-align: center;
+    background: #91b4c9;
+}
+
+body.dark .app {
+  background-color: #23272f;
+}
+
+body.dark .main {
+  background-color: #23272f;
 }
