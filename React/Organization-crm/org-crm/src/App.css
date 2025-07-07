@@ -1,0 +1,70 @@
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  background-color: #f3f4f6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+/* Light Mode (Default) */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #121212;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* General UI overrides */
+body.dark input,
+body.dark textarea,
+body.dark .search-box {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+/* Scrollbar styling (optional) */
+body.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Button / Icon hover effects (optional) */
+.theme-toggle:hover {
+  opacity: 0.8;
+}

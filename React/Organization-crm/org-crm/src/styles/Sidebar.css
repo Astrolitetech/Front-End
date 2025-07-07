@@ -1,0 +1,113 @@
+.sidebar {
+  width: 260px;
+  background-color: rgb(221, 219, 219);
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin-top: 60px;
+}
+
+.menu-label {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 220px;
+}
+
+.nav-link.active {
+  opacity: 1;
+  color: orangered;
+  border-left: 5px solid orangered;
+  padding-left: 8px;
+}
+
+.sidebar-icon {
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.support-box {
+  background-color: #e0f2fe;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.support-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.support-subtitle {
+  font-size: 12px;
+  color: #2563eb;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.nav-link {
+  font-family: initial;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 15px;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.nav-link:hover {
+  background-color: rgb(180, 180, 180);
+}
+
+/* Full Dark Mode Overrides for Sidebar */
+body.dark .sidebar {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark .menu-label {
+  color: #ccc;
+}
+
+body.dark .nav-link {
+  color: #f0f0f0;
+}
+
+body.dark .nav-link:hover {
+  background-color: #636363;
+}
+
+body.dark .nav-link.active {
+  color: pink;
+  border-left: 5px solid pink;
+  background-color: #2a2a2a;
+}
+
+body.dark .support-box {
+  background-color: #14364b;
+  color: #cce4f6;
+}
+
+body.dark .support-title {
+  color: #cce4f6;
+}
+
+body.dark .support-subtitle {
+  color: #7cc3ff;
+}

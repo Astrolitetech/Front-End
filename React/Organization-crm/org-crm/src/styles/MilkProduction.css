@@ -1,0 +1,162 @@
+.container {
+    margin-top: 60px;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.milk-header {
+    margin: 30px 10px 10px 10px;
+    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+    background: #a1c6df;
+}
+
+.subheader {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.cards {
+    justify-content: space-between;
+    gap: 10px;
+    display: flex;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 93%;
+    height: inherit;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.card.red {
+    background: rgb(236, 164, 174);
+}
+
+.card.blue {
+    background: rgb(179, 179, 235);
+}
+
+.card.green {
+    background: rgb(188, 245, 188);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.th,
+.td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.th {
+    background-color: #3498db;
+    color: white;
+}
+
+.action-btn {
+    border: transparent;
+    margin: 2px;
+    background: transparent;
+}
+
+.option-value {
+    color: black;
+    background: white;
+}
+
+.action-btn:hover {
+    color: orangered;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+.chart-box {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        flex-wrap: wrap;
+    }
+
+    .chart-box {
+        flex: 1 1 100%;
+        min-width: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Dark mode */
+
+body.dark .container {
+    background: black;
+    margin-top: 60px;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+body.dark .milk-header {
+    margin: 30px 10px 10px 10px;
+    border-radius: 15px;
+    height: 40px;
+    text-align: center;
+    background: #91b4c9;
+}
+
+body.dark .subheader {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: white;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+body.dark .chart-box {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .icon {
+    color: white;
+}
+
+body.dark .option-value {
+    color: white;
+    background: black;
+}

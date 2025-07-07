@@ -1,0 +1,76 @@
+.dashboard {
+    padding: 20px;
+    margin-top: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+}
+
+.icon {
+    height: 16px;
+}
+
+.dashboard h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-top: 5px solid orangered;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    margin-bottom: 15px;
+    margin-top: -15px;
+    color: #34495e;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.small-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Dark mode */
+
+body.dark .dashboard {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .card {
+    background-color: black;
+    padding: 20px;
+    border-top: 5px solid pink;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .dashboard h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+body.dark .card h4 {
+    margin-bottom: 15px;
+    margin-top: -15px;
+    color: white;
+}

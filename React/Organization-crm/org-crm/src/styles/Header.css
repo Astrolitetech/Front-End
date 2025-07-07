@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  height: 40px;
+  width: 98%;
+  position: fixed;
+  margin-bottom: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px #949494;
+}
+
+.left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 30px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.mid {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mid input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaabac;
+}
+
+.search-box {
+  width: 250px;
+}
+
+.right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header-icon {
+  height: 25px;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark Mode Overrides */
+body.dark .header {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px #000;
+  color: #e0e0e0;
+}
+
+body.dark .left h2 {
+  color: #e0e0e0;
+}
+
+body.dark .mid input {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark .search-box::placeholder {
+  color: #aaa;
+}
+
+body.dark .header-icon {
+  color: #e0e0e0;
+}
+
+/* Optional: hover effect for icons */
+body.dark .header-icon:hover {
+  color: #90caf9;
+}

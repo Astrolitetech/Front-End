@@ -1,0 +1,176 @@
+.crm-content {
+  padding: 20px;
+  margin-top: 60px;
+  height: 100%;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  height: 150px;
+  flex: 1 1 200px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-top-width: 4px;
+  border-top-style: solid;
+}
+
+.border-green {
+  border-top-color: #22c55e;
+}
+
+.border-blue {
+  border-top-color: #3b82f6;
+}
+
+.border-purple {
+  border-top-color: #8b5cf6;
+}
+
+.border-orange {
+  border-top-color: #f97316;
+}
+
+.card-title {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.card-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-change {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.small {
+  color: #9ca3af;
+  font-size: 11px;
+  margin-left: 3px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 4px 10px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #e0e7ff;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.head-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-side {
+  margin-left: 0;
+}
+
+.btn {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 6px 12px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn.blue {
+  background-color: #3b82f6;
+}
+
+.btn.green {
+  background-color: #22c55e;
+}
+
+.btn.purple {
+  background-color: #6366f1;
+}
+
+.btn-icon {
+  height: 15px;
+}
+
+/* 🌙 Dark Mode Overrides for CRM Content */
+
+body.dark .card {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .card-title {
+  color: #a1a1aa;
+  /* softer gray */
+}
+
+body.dark .crm-content {
+  background: black;
+  color: white;
+}
+
+body.dark .card-change {
+  color: #9ca3af;
+}
+
+body.dark .small {
+  color: #888;
+}
+
+body.dark .tab {
+  background-color: #2a2a2a;
+  color: #d1d5db;
+}
+
+body.dark .tab.active {
+  background-color: #3730a3;
+  /* dark indigo */
+  color: #e0e7ff;
+}
+
+body.dark .btn {
+  color: #fff;
+  opacity: 0.95;
+}
+
+body.dark .btn:hover {
+  opacity: 1;
+}
+
+body.dark .btn.blue {
+  background-color: #2563eb;
+}
+
+body.dark .btn.green {
+  background-color: #16a34a;
+}
+
+body.dark .btn.purple {
+  background-color: #4f46e5;
+}

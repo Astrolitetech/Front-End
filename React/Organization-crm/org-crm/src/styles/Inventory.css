@@ -1,0 +1,80 @@
+.inventory-container {
+    margin-top: 60px;
+}
+
+.headline {
+    margin: 30px 10px 10px 10px;
+    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+    background: #a1c6df;
+}
+
+.headings {
+    margin-left: 33%;
+    display: flex;
+    gap: 40px;
+}
+
+.heading {
+    font-size: 20px;
+    border-radius: 7px;
+    background: transparent;
+    border: transparent;
+}
+
+.heading.active {
+    color: orangered;
+    border-bottom: 5px solid orangered;
+}
+
+
+
+.inventory-table,
+.report-table,
+.settings-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.inventory-table th, .inventory-table td,
+.report-table th, .report-table td,
+.settings-table th, .settings-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.inventory-table th,
+.report-table th,
+.settings-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Dark */
+
+body.dark .inventory-container {
+    margin-top: 60px;
+    background: black;
+    color: white;
+    min-height: 100vh;
+}
+
+body.dark .heading {
+    background: black;
+    color: white;
+}
+
+body.dark .heading.active {
+    color: pink;
+    border-bottom: 5px solid pink;
+}
+
+body.dark .inventory-table th,
+body.dark .report-table th,
+body.dark .settings-table th {
+    color: white;
+}
