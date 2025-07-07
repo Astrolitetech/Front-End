@@ -70,7 +70,6 @@ const Settings = ({ darkMode, setDarkMode }) => {
             setting.key === 'theme' ? { ...setting, enabled: darkMode } : setting
         );
     });
-    const [saved, setSaved] = useState(false);
 
     // Keep settings[0] (theme) in sync with darkMode prop
     React.useEffect(() => {
@@ -91,17 +90,13 @@ const Settings = ({ darkMode, setDarkMode }) => {
             }
             return s;
         }));
-        setSaved(false);
-    };
-
-    const handleSave = () => {
-        setSaved(true);
-        setTimeout(() => setSaved(false), 1500);
     };
 
     return (
         <div className="settings-container">
-            <h2>User Preferences</h2>
+            <div className="page-header">
+                <h2>User Preferences</h2>
+            </div>
             <div className="settings-cards">
                 <div style={{ flex: 2, minWidth: 340 }}>
                     {settings.map((s, idx) => (
@@ -133,12 +128,6 @@ const Settings = ({ darkMode, setDarkMode }) => {
                             </button>
                         </div>
                     ))}
-                    <button
-                        onClick={handleSave}
-                        className="settings-save-btn"
-                    >
-                        {saved ? 'Preferences Saved!' : 'Save All'}
-                    </button>
                 </div>
             </div>
         </div>
