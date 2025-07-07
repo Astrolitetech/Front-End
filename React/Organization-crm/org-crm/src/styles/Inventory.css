@@ -1,18 +1,7 @@
-/* Inventory Page Styles */
-
 .inventory-container {
-  padding: 20px;
+  margin-top: 60px;
   background: #f8f9fa;
-  min-height: 100vh;
 }
-
-.page-header h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: #2c3e50;
-}
-
 .headings {
   display: flex;
   gap: 16px;
@@ -94,9 +83,6 @@
 body.dark .inventory-container {
   background: #23272f;
   color: #e0e0e0;
-}
-body.dark .page-header h2 {
-  color: #fff;
 }
 body.dark .headings .heading {
   background: #232b36;
