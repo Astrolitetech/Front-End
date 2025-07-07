@@ -28,7 +28,6 @@ body.dark {
   background-color: #f9fafb;
 }
 
-/* Light Mode (Default) */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -36,13 +35,11 @@ body {
   color: #121212;
 }
 
-/* Dark Mode */
 body.dark {
   background-color: #121212;
   color: #e0e0e0;
 }
 
-/* General UI overrides */
 body.dark input,
 body.dark textarea,
 body.dark .search-box {
@@ -51,7 +48,6 @@ body.dark .search-box {
   border: 1px solid #333;
 }
 
-/* Scrollbar styling (optional) */
 body.dark ::-webkit-scrollbar {
   width: 10px;
 }
@@ -64,7 +60,6 @@ body.dark ::-webkit-scrollbar-thumb {
   background: #555;
 }
 
-/* Button / Icon hover effects (optional) */
 .theme-toggle:hover {
   opacity: 0.8;
 }
