@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Dashboard.css';
 import { Line, Bar } from 'react-chartjs-2';
-import { BadgeCheck, ChartLine, TriangleAlert, Utensils, Wheat, Search, PawPrint, Calendar, Tractor, Hospital, ClipboardList, FileChartColumn } from 'lucide-react';
+import { BadgeCheck, ChartLine, TriangleAlert, Utensils, Wheat, Search, PawPrint, Calendar, Tractor, Hospital, ClipboardList, FileChartColumn, Award, Star } from 'lucide-react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -55,12 +55,12 @@ const Dashboard = () => {
     ];
 
     return (
-        <div className="page-container">
-            <div className="page-header">
-                <h2>Dairy Farm Dashboard <Wheat className='icon' /></h2>
+        <div className="page-container dashboard-hero">
+            <div className="dashboard-header">
+                <h2 className="dashboard-header-title">Dairy Farm Dashboard <Wheat className='icon' /></h2>
             </div>
             <div className="dashboard-grid">
-                <div className="card small-card">
+                <div className="dashboard-card small-card">
                     <h4><PawPrint className='icon' /> Cow Health</h4>
                     <ul>
                         <li><BadgeCheck className='icon' /> Healthy: 45</li>
@@ -69,7 +69,7 @@ const Dashboard = () => {
                     </ul>
                 </div>
 
-                <div className="card small-card">
+                <div className="dashboard-card small-card">
                     <h4><Calendar className='icon' /> Today's Activities</h4>
                     <ul>
                         <li><Tractor className='icon' /> Feeding: Done</li>
@@ -78,7 +78,7 @@ const Dashboard = () => {
                     </ul>
                 </div>
 
-                <div className="card">
+                <div className="dashboard-card">
                     <h4><ClipboardList className='icon' /> Cattle Details</h4>
                     <table className="table">
                         <thead>
@@ -102,7 +102,7 @@ const Dashboard = () => {
                     </table>
                 </div>
 
-                <div className="card">
+                <div className="dashboard-card">
                     <h4><FileChartColumn className='icon' /> Feed Consumption Log</h4>
                     <table className="table">
                         <thead>
@@ -126,14 +126,36 @@ const Dashboard = () => {
                     </table>
                 </div>
 
-                <div className="card">
+                <div className="dashboard-card">
                     <h4><ChartLine className='icon' /> Milk Production</h4>
                     <Line data={milkData} />
                 </div>
 
-                <div className="card">
+                <div className="dashboard-card">
                     <h4><Utensils className='icon' /> Feed Stock</h4>
                     <Bar data={feedStockData} />
+                </div>
+
+                {/* New Feature: Staff Overview */}
+                <div className="dashboard-card">
+                    <h4><Star className='icon' /> Staff Overview</h4>
+                    <ul>
+                        <li>Farm Manager: Priya Sharma</li>
+                        <li>Veterinarian: Dr. Rakesh Kumar</li>
+                        <li>Delivery Lead: Sunil Patel</li>
+                        <li>Staff Count: 18</li>
+                    </ul>
+                </div>
+
+                {/* New Feature: Quick Stats */}
+                <div className="dashboard-card">
+                    <h4><Award className='icon' /> Quick Stats</h4>
+                    <ul>
+                        <li>Total Revenue: ₹2,40,000</li>
+                        <li>Avg. Milk Quality: 88.5%</li>
+                        <li>Pending Orders: 7</li>
+                        <li>Customer Satisfaction: 92%</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,71 +1,144 @@
-/* Remove .dashboard, now using .page-container from App.css */
-
-.icon {
-    height: 16px;
+.dashboard-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  color: #232323;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding-bottom: 40px;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark .dashboard-hero {
+  background: #111;
+  color: #f3f3f3;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2c3e50;
+.dashboard-header {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: linear-gradient(90deg, #fffbe7 0%, #f7b73333 100%);
+  box-shadow: 0 4px 16px 0 rgba(252,74,26,0.10), 0 2px 8px 0 rgba(0,0,0,0.06);
+  border-bottom: 2.5px solid orangered;
+  outline: 2px solid #fc4a1a22;
+  outline-offset: -4px;
 }
+body.dark .dashboard-header {
+  background: linear-gradient(90deg, #23272f 0%, #fc4a1a22 100%);
+  box-shadow: 0 4px 16px 0 #0008;
+  border-bottom: 2.5px solid pink;
+  outline: 2px solid #f7b73344;
+  outline-offset: -4px;
+}
+.dashboard-header-title h2 {
+  font-size: 2.2em;
+  font-weight: 800;
+  color: orangered;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body.dark .dashboard-header-title h2 {
+  color: pink;
+}
+/* Removed .dashboard-header-badge, .dashboard-header-sub, .dashboard-header-highlight as per new design */
 
 .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.card {
-    background-color: white;
-    padding: 20px;
-    border-top: 5px solid orangered;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.dashboard-card {
+  background: #fff;
+  color: #232323;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px 0 rgba(252,74,26,0.13), 0 2px 8px 0 rgba(0,0,0,0.07);
+  padding: 28px 24px 18px 24px;
+  border: 1.5px solid orangered;
+  outline: 2px solid #fc4a1a22;
+  outline-offset: -4px;
+  transition: box-shadow 0.2s, border 0.2s, outline 0.2s;
 }
-
-.card h4 {
-    margin-bottom: 15px;
-    margin-top: -15px;
-    color: #34495e;
+.dashboard-card:hover {
+  box-shadow: 0 10px 32px 0 rgba(252,74,26,0.18), 0 4px 16px 0 rgba(0,0,0,0.10);
+  border: 1.5px solid orangered;
+  outline: 2.5px solid orangered;
+  background: #fffbe7;
 }
-
-.card ul {
-    list-style: none;
-    padding: 0;
-    line-height: 1.8;
+body.dark .dashboard-card:hover {
+  box-shadow: 0 10px 32px 0 #fc4a1a44, 0 4px 16px 0 #000a;
+  border: 1.5px solid pink;
+  outline: 2.5px solid pink;
+  background: #23272f;
 }
-
+.dashboard-card h4 {
+  margin-bottom: 15px;
+  margin-top: -15px;
+  color: orangered;
+  background: linear-gradient(90deg, #fffbe7 0%, #f7b73333 100%);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 800;
+  font-size: 1.15em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #fc4a1a11;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body.dark .dashboard-card h4 {
+  color: pink;
+  background: linear-gradient(90deg, #23272f 0%, #fc4a1a22 100%);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 800;
+  font-size: 1.15em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #0008;
+}
+.dashboard-card ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+}
 .small-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Dark mode */
-
-body.dark {
-    background: #23272f;
-    color: #e0e0e0;
-    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
+body.dark .dashboard-header {
+  background: linear-gradient(90deg, #23272f 0%, #fc4a1a22 100%);
+  box-shadow: 0 2px 12px #0008;
 }
-
-body.dark .card {
-    background-color: #111;
-    padding: 20px;
-    border-top: 5px solid pink;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+body.dark .dashboard-header-title h2 {
+  color: #fff;
 }
-
-body.dark h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: white;
+body.dark .dashboard-header-badge {
+  background: #23272f;
+  color: #ffb385;
+  border: 1px solid #444;
 }
-
-body.dark .card h4 {
-    margin-bottom: 15px;
-    margin-top: -15px;
-    color: white;
+body.dark .dashboard-header-highlight {
+  background: #23272f;
+  color: #ffb385;
+  border: 1px solid #444;
+}
+body.dark .dashboard-card {
+  background: #181818;
+  color: #f3f3f3;
+  border: 1px solid #444;
+  box-shadow: 0 4px 16px 0 #0008;
+}
+body.dark .dashboard-card h4 {
+  color: #ffb385;
 }
