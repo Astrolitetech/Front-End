@@ -1,6 +1,234 @@
+.welcome-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    color: #232323;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding-bottom: 40px;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark .welcome-hero {
+    background: #111;
+    color: #f3f3f3;
+}
+
+.welcome-header {
+    text-align: center;
+    margin-top: 40px;
+    color: #181818;
+    /* black for light mode */
+}
+
+body.dark .welcome-header {
+    color: #fff !important;
+    /* white for dark mode */
+}
+
 .welcome-logo {
-    margin-top: 50px;
-    width: 200px;
+    margin-top: 10px;
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px #00000033;
+}
+
+.welcome-title {
+    font-size: 2.8em;
+    color: black;
+    margin: 18px 0 8px 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #fc4a1a44;
+}
+
+body.dark .welcome-title {
+    color: white;
+    /* light orange for dark mode */
+}
+
+.welcome-tagline {
+    font-size: 1.3em;
+    color: orangered;
+    margin-bottom: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+body.dark .welcome-tagline {
+    color: pink;
+    /* light orange for dark mode */
+}
+
+.icon-leaf {
+    color: #43cea2;
+}
+
+/* About Card */
+.about {
+    background: #fff;
+    color: #232323;
+    border-radius: 12px;
+    padding: 28px 24px 18px 24px;
+    margin: 30px 0 18px 0;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid #f76a3333;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08), 0 1.5px 4px 0 rgba(226, 24, 24, 0.04);
+}
+
+
+body.dark .about {
+    border: 1px solid #f733ac33;
+    background: #181818;
+    color: #f3f3f3;
+}
+
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 18px;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.05em;
+    color: orangered;
+    font-weight: 600;
+    gap: 4px;
+}
+
+body.dark .highlight {
+    color: pink;
+}
+
+/* Features Card */
+.features {
+    margin: 30px 0 18px 0;
+    background: #fff;
+    color: #232323;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 0 rgba(252, 74, 26, 0.08), 0 1.5px 4px 0 rgba(0, 0, 0, 0.04);
+    padding: 28px 24px 18px 24px;
+    max-width: 900px;
+    text-align: center;
+    border: 1px solid #f7b73333;
+}
+
+
+body.dark .features {
+    background: #181818;
+    color: #f3f3f3;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 18px;
+}
+
+/* Feature Card */
+.feature-card {
+    background: #fffbe7;
+    border-radius: 10px;
+    padding: 18px 12px;
+    box-shadow: 0 2px 8px #fc4a1a11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #f7b73344;
+    min-height: 140px;
+    color: #232323;
+}
+
+.feature-card h4 {
+    margin: 8px 0 4px 0;
+    color: orangered;
+    font-size: 1.1em;
+}
+
+body.dark .feature-card h4 {
+    color: pink;
+}
+
+body.dark .feature-card {
+    background: #2c2c2c;
+    color: #f3f3f3;
+    border: 1px solid #444;
+}
+
+.feature-card p {
+    color: #333;
+    font-size: 0.98em;
+}
+
+body.dark .feature-card p {
+    color: #e0e0e0;
+}
+
+/* Contact Card */
+.contact {
+    background: #fff;
+    color: #232323;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 0 rgba(252, 74, 26, 0.08), 0 1.5px 4px 0 rgba(0, 0, 0, 0.04);
+    padding: 28px 24px 18px 24px;
+    max-width: 700px;
+    text-align: center;
+    margin: 30px 0 0 0;
+    border: 1px solid #f7b73333;
+}
+
+body.dark .contact {
+    background: #181818;
+    color: #f3f3f3;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    color: #fc4a1a;
+    font-weight: 600;
+}
+
+body.dark .contact-info {
+    color: pink;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.social-links a {
+    color: #fc4a1a;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #f7b733;
+}
+
+body.dark .social-links a {
+    color: #ffb385;
+}
+
+body.dark .social-links a:hover {
+    color: #fffbe7;
 }
 
 .header h1 {
