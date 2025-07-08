@@ -1,3 +1,34 @@
+/* Settings Header Design (from CRMContent) */
+.settings-header {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: linear-gradient(90deg, #fffbe7 0%, #f7b73333 100%);
+    box-shadow: 0 4px 16px 0 rgba(252, 74, 26, 0.10), 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+    border-bottom: 2.5px solid orangered;
+    outline: 2px solid #fc4a1a22;
+    outline-offset: -4px;
+}
+
+body.dark .settings-header {
+    background: linear-gradient(90deg, #23272f 0%, #fc4a1a22 100%);
+    box-shadow: 0 4px 16px 0 #0008;
+    border-bottom: 2.5px solid pink;
+    outline: 2px solid #f7b73344;
+    outline-offset: -4px;
+}
+
+.settings-header-title h2 {
+    color: black;
+}
+
+body.dark .settings-header-title h2 {
+    color: white;
+}
+
 .settings-cards {
     display: flex;
     gap: 32px;
@@ -88,4 +119,3 @@ body.dark .settings-card .toggle-btn {
 body.dark .settings-card.enabled .toggle-btn {
     background: #4caf50;
 }
-

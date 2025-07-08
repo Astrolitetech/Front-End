@@ -95,7 +95,7 @@ body.dark .crm-table {
 
 body.dark .crm-table th {
   background: #23272f;
-  color: #ffb385;
+  color: pink;
 }
 
 body.dark .crm-table td {
@@ -191,18 +191,11 @@ body.dark .crm-header {
 }
 
 .crm-header-title h2 {
-  font-size: 2.2em;
-  font-weight: 800;
-  color: orangered;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  color: black;
 }
 
 body.dark .crm-header-title h2 {
-  color: pink;
+  color: white;
 }
 
 .crm-grid {

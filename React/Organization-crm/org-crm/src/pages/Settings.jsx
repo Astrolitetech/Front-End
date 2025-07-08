@@ -94,13 +94,15 @@ const Settings = ({ darkMode, setDarkMode }) => {
 
     return (
         <div className="page-container">
-            <div className="page-header">
-                <h2>User Preferences</h2>
+            <div className="settings-header">
+                <div className="settings-header-title">
+                    <h2>User Preferences</h2>
+                </div>
             </div>
             <div className="settings-cards">
                 <div style={{ flex: 2, minWidth: 340 }}>
                     {settings.map((s, idx) => (
-                        <div key={s.key} className={`settings-card${s.enabled ? ' enabled' : ''}`}>
+                        <div key={s.key} className={`settings-card${s.enabled ? ' enabled' : ''}`}> 
                             <div className="icon-bg">{s.icon}</div>
                             <div style={{ flex: 1 }}>
                                 <div className="card-title">{s.title}</div>
