@@ -74,12 +74,14 @@ body.dark .dashboard-header-title h2 {
     outline-offset: -4px;
     transition: box-shadow 0.2s, border 0.2s, outline 0.2s;
 }
+
 .dashboard-card:hover {
     box-shadow: 0 10px 32px 0 rgba(252, 74, 26, 0.18), 0 4px 16px 0 rgba(0, 0, 0, 0.10);
     border: 1.5px solid orangered;
     outline: 2.5px solid orangered;
     background: #fffbe7;
 }
+
 .dashboard-card h4 {
     margin-bottom: 15px;
     margin-top: -15px;
@@ -95,17 +97,20 @@ body.dark .dashboard-header-title h2 {
     align-items: center;
     gap: 8px;
 }
+
 body.dark .dashboard-card {
     background: #000;
     color: white;
     border: 1.5px solid pink;
 }
+
 body.dark .dashboard-card:hover {
     box-shadow: 0 10px 32px 0 #fc4a1a44, 0 4px 16px 0 #000a;
     border: 1.5px solid pink;
     outline: 2.5px solid pink;
     background: #23272f;
 }
+
 body.dark .dashboard-card h4 {
     color: pink;
     background: linear-gradient(90deg, #23272f 0%, #fc4a1a22 100%);
