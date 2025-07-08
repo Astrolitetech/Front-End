@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUserFriends, FaTractor, FaRupeeSign, FaTasks, FaUserTie, FaClipboardList, FaUsers } from "react-icons/fa";
 import "../styles/CRMContent.css";
 
 const metrics = [
@@ -113,37 +114,120 @@ const AddCustomerModal = ({ isOpen, onClose }) => {
 const CRMContent = () => {
   const [showCustomerModal, setShowCustomerModal] = useState(false);
   return (
-    <div className="page-container">
-      <div className="page-header">
-        <h2>Customer Relationship Management</h2>
-      </div>
-      <div className="head-line">
-        <div className="left-side">
-          <p>Complete customer & farmer relationship management system</p>
+    <div className="page-container crm-hero">
+      <div className="crm-header">
+        <div className="crm-header-title">
+          <h2>Customer Relationship Management</h2>
         </div>
-        <div className="right-side">
+      </div>
+      <div className="crm-toolbar">
+        <p className="crm-toolbar-desc">Complete customer & farmer relationship management system</p>
+        <div className="crm-toolbar-actions">
           <button className="btn blue" onClick={() => setShowCustomerModal(true)}>Add Customer</button>
           <button className="btn green">Create Order</button>
           <button className="btn purple">Employees</button>
         </div>
       </div>
-      <div className="tabs">
+      <div className="tabs" style={{ width: '100%', maxWidth: 1200, margin: '0 auto', marginBottom: 24 }}>
         <span className="tab active">Customers & Farmers</span>
         <span className="tab">Tasks & Follow-ups</span>
         <span className="tab">Milk Collections</span>
         <span className="tab">Analytics</span>
       </div>
-      <div className="metrics">
-        {metrics.map((m, i) => (
-          <div key={i} className={`card border-${m.color}`}>
-            <div className="card-title">{m.title}</div>
-            <div className="card-value">{m.value}</div>
-            <div className={`card-change text-${m.color}`}>
-              {m.change} <span className="small">vs last month</span>
-            </div>
-          </div>
-        ))}
+      <div className="crm-grid">
+        <div className="crm-card">
+          <h4><FaUserFriends style={{ marginRight: 8 }} /> Customers</h4>
+          <ul>
+            <li><b>Active:</b> 3</li>
+            <li><b>Pending:</b> 2</li>
+            <li><b>Total:</b> 5</li>
+          </ul>
+        </div>
+        <div className="crm-card">
+          <h4><FaTractor style={{ marginRight: 8 }} /> Farmers</h4>
+          <ul>
+            <li><b>Registered:</b> 2</li>
+            <li><b>Milk Collected:</b> 3,700L</li>
+            <li><b>Avg Quality:</b> 88.5%</li>
+          </ul>
+        </div>
+        <div className="crm-card">
+          <h4><FaRupeeSign style={{ marginRight: 8 }} /> Revenue</h4>
+          <ul>
+            <li><b>This Month:</b> ₹2,400</li>
+            <li><b>Growth:</b> +22%</li>
+            <li><b>Pending Orders:</b> 2</li>
+          </ul>
+        </div>
+        <div className="crm-card">
+          <h4><FaTasks style={{ marginRight: 8 }} /> Tasks</h4>
+          <ul>
+            <li><b>Open:</b> 2</li>
+            <li><b>Completed:</b> 8</li>
+            <li><b>Follow-ups:</b> 3</li>
+          </ul>
+        </div>
       </div>
+
+      {/* Employees Table */}
+      <div className="crm-card" style={{ marginTop: 32 }}>
+        <h4><FaUserTie style={{ marginRight: 8 }} /> Employees</h4>
+        <table className="crm-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ravi Kumar</td><td>Manager</td><td>Active</td></tr>
+            <tr><td>Priya Singh</td><td>Sales</td><td>Active</td></tr>
+            <tr><td>Ajay Patel</td><td>Support</td><td>On Leave</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Orders Table */}
+      <div className="crm-card" style={{ marginTop: 32 }}>
+        <h4><FaClipboardList style={{ marginRight: 8 }} /> Recent Orders</h4>
+        <table className="crm-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>#1001</td><td>Sunil Sharma</td><td>₹800</td><td>Completed</td></tr>
+            <tr><td>#1002</td><td>Meena Joshi</td><td>₹1200</td><td>Pending</td></tr>
+            <tr><td>#1003</td><td>Ravi Kumar</td><td>₹400</td><td>Completed</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Customers Table */}
+      <div className="crm-card" style={{ marginTop: 32, marginBottom: 32 }}>
+        <h4><FaUsers style={{ marginRight: 8 }} /> Customers</h4>
+        <table className="crm-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sunil Sharma</td><td>sunil@gmail.com</td><td>9876543210</td><td>Active</td></tr>
+            <tr><td>Meena Joshi</td><td>meena@gmail.com</td><td>9123456780</td><td>Active</td></tr>
+            <tr><td>Ravi Kumar</td><td>ravi@gmail.com</td><td>9988776655</td><td>Inactive</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <AddCustomerModal isOpen={showCustomerModal} onClose={() => setShowCustomerModal(false)} />
     </div>
   );
